@@ -1,0 +1,10 @@
+Animator
+- Player.controller:
+ + floPosX: hoành độ của player 
+ + floPosY: tung độ của player
+ + floSpeed: tốc độ của player
+ + triDash: trigger kích hoạt dash
+ + boolIsMoving: cho biết player có đang di chuyển hay không
+ + boolAttack: cho biết có đang tấn công hay không
+ + floAttackCombo: cho biết đang là đòn thứ mấy trong AttackCombo
+

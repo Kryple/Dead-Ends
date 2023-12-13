@@ -1,0 +1,1013 @@
+fileFormatVersion: 2
+guid: ef63650e9de5a3c40a99addea3aa5a2a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bite01
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 238
+        width: 26
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5037555, y: 0.31866673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4d727ff8a8a084abbd70b448d97cd6
+      internalID: 1062222386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite02
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 237
+        width: 22
+        height: 16
+      alignment: 9
+      pivot: {x: 0.49112338, y: 0.27420425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03046350b13cce498683b35b4cc1364
+      internalID: -1451412679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite03
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 236
+        width: 20
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2893002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8289317f4aef10d4b8bd5a0d7f9f8a94
+      internalID: 1873515452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite04
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 225
+        width: 34
+        height: 25
+      alignment: 9
+      pivot: {x: 0.4511795, y: 0.39845335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3e83f9fcc004a41b313caaf982f933
+      internalID: -1345212886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite06
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 226
+        width: 31
+        height: 19
+      alignment: 9
+      pivot: {x: 0.68268317, y: 0.76208895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf5343cc1d40dc4c95dac38b4d68e6f
+      internalID: 1809612029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite08
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 239
+        width: 28
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.29720718}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c553d2b38ad88344932425131becfeb
+      internalID: 1247739753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite05
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 222
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.7328368, y: 0.81067586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d1c04e4199ab848aee9d82b8bf63cf
+      internalID: -189895187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bite07
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 239
+        width: 29
+        height: 11
+      alignment: 9
+      pivot: {x: 0.52020156, y: 0.32247093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d1cfa69ec815a479e0e2d1267fa973
+      internalID: -1369903211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly01
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 187
+        width: 26
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.25787243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cb2ce60afb15444b26e3b050d71e51
+      internalID: -1813072149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly02
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 187
+        width: 22
+        height: 16
+      alignment: 9
+      pivot: {x: 0.49999964, y: 0.25278473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0dde78575bb6a43a532e9819109217
+      internalID: -101717539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly03
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 187
+        width: 20
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20235242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f377373667cf9240ac341a0648e3180
+      internalID: 1340924926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly04
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 177
+        width: 14
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4999989, y: 0.7574599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ceec98ad1de6e04fbf369f615e71b2f
+      internalID: -1427652065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly05
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 176
+        width: 20
+        height: 19
+      alignment: 9
+      pivot: {x: 0.49555284, y: 0.76233715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ab0ab22b0270541a0b048e351ad42d
+      internalID: -1067299099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly06
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 187
+        width: 32
+        height: 11
+      alignment: 9
+      pivot: {x: 0.46226406, y: 0.35030434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232fabddca7cd1647961f1f93880fc0f
+      internalID: 1103982374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fly07
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 187
+        width: 28
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5078408, y: 0.28889114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fa2703482cde7418cc0b6dc0639828
+      internalID: -1782331947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Formation01
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 134
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cad377c54322d41af5837a179a37aa
+      internalID: -1796439163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Formation02
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 136
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33579dea1588c4f458287c7cffde8533
+      internalID: -307936528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Formation03
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 138
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5949a01def4c1274eb01d36a80c7672a
+      internalID: 658493937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die02
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 98
+        width: 22
+        height: 16
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.28753424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac728cd130e807498b8afd2e1f6eda2
+      internalID: -1523363316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die03
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 95
+        width: 11
+        height: 19
+      alignment: 9
+      pivot: {x: 0.430929, y: 0.276062}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19e5dc4cb57b6f46a781f660162bfa5
+      internalID: 1825239264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die04
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 94
+        width: 9
+        height: 20
+      alignment: 9
+      pivot: {x: 0.4661204, y: 0.3475422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a300780fec20d4fa93154900a8cac1
+      internalID: 1306391588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die05
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 92
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.4753703, y: 0.39924762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea351d5686779c4dbb86f2b3d7b824d
+      internalID: 49629945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die06
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 97
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a584adf2b07c2b4428a763104d985b92
+      internalID: -498505137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly01
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 57
+        width: 14
+        height: 9
+      alignment: 9
+      pivot: {x: 0.49385494, y: 0.50328743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8815584dfbe988c4eb03577b16b629e3
+      internalID: -129715792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly02
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 56
+        width: 14
+        height: 10
+      alignment: 9
+      pivot: {x: 0.4951608, y: 0.47290573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1198d600d9b0504a877afc38604cd34
+      internalID: -2129030943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly03
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 54
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.4844688, y: 0.3826529}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e348d1cda35754b9d4ca27d06e4abd
+      internalID: -1861139023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly04
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 57
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694d5c6a382916b49b4f7994159e8c81
+      internalID: 1005664273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly05
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 58
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0ef505e3ae13c48a6c5c4381b4b629
+      internalID: -2097754287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleToFly06
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 28
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd85417868471e408c39a3b44bec0f1
+      internalID: 627648291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle02
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6922b06f54aa754419945bada6d3bf08
+      internalID: -1953537316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle03
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487db7e5e69f499469f9d8d449141765
+      internalID: -828443104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle04
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66756c54eb2408e429c686f0a4d67841
+      internalID: -1090163824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle05
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b156f8ee8e6c04ab04e76d8bb4a180
+      internalID: 87311496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle06
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ea2fd829a8f564583582e4f313fa52
+      internalID: 8443985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle07
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbed0d455d7baa14984cb3983628a673
+      internalID: -953121742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die01
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 99
+        width: 26
+        height: 14
+      alignment: 9
+      pivot: {x: 0.49066097, y: 0.33523124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cc2d129bacd2643b580a1adee039b3
+      internalID: -331227114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle01
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d871bf2a8b2d56c41a67162248451eba
+      internalID: 1513523528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bite01: 1062222386
+      Bite02: -1451412679
+      Bite03: 1873515452
+      Bite04: -1345212886
+      Bite05: -189895187
+      Bite06: 1809612029
+      Bite07: -1369903211
+      Bite08: 1247739753
+      Dark Bat_10: 141644310
+      Dark Bat_11: -1659453249
+      Dark Bat_12: -953314745
+      Dark Bat_13: 1258409821
+      Dark Bat_14: -1769153001
+      Dark Bat_15: 280400748
+      Dark Bat_16: 1621607276
+      Dark Bat_17: 1082197318
+      Dark Bat_22: 1896866157
+      Dark Bat_24: 757580925
+      Dark Bat_27: -520202190
+      Dark Bat_28: -57385907
+      Dark Bat_29: -1591004569
+      Dark Bat_30: -1064474920
+      Dark Bat_31: -1893022369
+      Dark Bat_32: -1604757223
+      Dark Bat_33: 570715495
+      Dark Bat_34: 1289776316
+      Dark Bat_38: 1245914348
+      Dark Bat_39: -1911052371
+      Dark Bat_4: -1350480378
+      Dark Bat_40: 1787696599
+      Dark Bat_41: -1189414492
+      Dark Bat_42: 743563790
+      Dark Bat_43: 1551589514
+      Dark Bat_48: 888259758
+      Dark Bat_49: 1725372266
+      Dark Bat_5: 1876686079
+      Dark Bat_50: -656517847
+      Dark Bat_51: -1817267206
+      Dark Bat_52: -1799735145
+      Dark Bat_53: -1045391928
+      Dark Bat_54: 28327235
+      Dark Bat_55: 1820912912
+      Dark Bat_56: -888117229
+      Dark Bat_59: -1812777853
+      Dark Bat_66: -1284970100
+      Dark Bat_67: -775180577
+      Dark Bat_68: -576827264
+      Dark Bat_69: -1838554420
+      Dark Bat_70: 1381533010
+      Dark Bat_71: 413203469
+      Dark Bat_78: -1601280966
+      Dark Bat_79: 1879814030
+      Dark Bat_80: 1655562655
+      Die0: -349819931
+      Die01: -331227114
+      Die02: -1523363316
+      Die03: 1825239264
+      Die04: 1306391588
+      Die05: 49629945
+      Die06: -498505137
+      Fly01: -1813072149
+      Fly02: -101717539
+      Fly03: 1340924926
+      Fly04: -1427652065
+      Fly05: -1067299099
+      Fly06: 1103982374
+      Fly07: -1782331947
+      Formation01: -1796439163
+      Formation02: -307936528
+      Formation03: 658493937
+      Idle01: 1513523528
+      Idle02: -1953537316
+      Idle03: -828443104
+      Idle04: -1090163824
+      Idle05: 87311496
+      Idle06: 8443985
+      Idle07: -953121742
+      IdleToFly01: -129715792
+      IdleToFly02: -2129030943
+      IdleToFly03: -1861139023
+      IdleToFly04: 1005664273
+      IdleToFly05: -2097754287
+      IdleToFly06: 627648291
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
