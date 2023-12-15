@@ -22,7 +22,7 @@ namespace Player
         public Rigidbody2D _rigidbody2D;
         public Animator _animator;
         public SpriteRenderer _spriteRenderer;
-
+        public AudioClip _walkingSound;
 
         private void Awake()
         {

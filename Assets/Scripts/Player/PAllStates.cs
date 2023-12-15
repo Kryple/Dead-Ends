@@ -13,6 +13,7 @@ namespace Player
         protected Rigidbody2D _rigidbody2D;
         protected Animator _animator;
         protected SpriteRenderer _spriteRenderer;
+        protected AudioClip _walkingSound;
 
         protected static float _horizontalInput; 
         protected static float _verticalInput; 
@@ -61,8 +62,9 @@ namespace Player
             _rigidbody2D = _pStateMachine._rigidbody2D;
             _animator = _pStateMachine._animator;
             _spriteRenderer = _pStateMachine._spriteRenderer;
-            
-            
+            _walkingSound = _pStateMachine._walkingSound;
+
+
             // _pStateMachine.CheckComponentNull(_audioSource);
             // _pStateMachine.CheckComponentNull(_collider2D);
             // _pStateMachine.CheckComponentNull(_rigidbody2D);

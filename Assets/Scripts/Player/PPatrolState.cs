@@ -13,9 +13,10 @@ namespace Player
         protected static string a_dash = "triDash";
         protected static string a_isMoving = "booIsMoving";
 
-        protected static float _speed = 7f; //current player's speed
-        protected static float _runSpeed = 7f; //player's speed when running
+        
+        protected static float _runSpeed = 4.4f; //player's speed when running
         protected static float _dashSpeed = _runSpeed * 7.5f; //player's speed when dashing
+        protected static float _speed = _runSpeed; //current player's speed
 
         
 

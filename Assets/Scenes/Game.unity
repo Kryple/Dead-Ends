@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 500662367}
   - component: {fileID: 500662374}
   - component: {fileID: 500662375}
+  - component: {fileID: 500662376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -177,8 +178,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.14, y: 0.27}
+  m_Offset: {x: 0, y: -0.06499999}
+  m_Size: {x: 0.14, y: 0.14}
   m_Direction: 0
 --- !u!50 &500662369
 Rigidbody2D:
@@ -192,7 +193,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.83984506
+  m_Mass: 0.38827503
   m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -289,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 500662365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.86, y: -10.53, z: 0}
+  m_LocalPosition: {x: 48.9, y: -29.6, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -314,6 +315,7 @@ MonoBehaviour:
   _rigidbody2D: {fileID: 0}
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
+  _walkingSound: {fileID: 8300000, guid: 74424c5323f003f448397adc4a1d8cc5, type: 3}
 --- !u!82 &500662375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -325,7 +327,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -410,6 +412,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &500662376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500662365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b454b6cd0d44fb93d5c76c1e72e36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 1612269712}
+  minIntensity: 0.74
+  maxIntensity: 1.23
+  flickerSpeed: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +560,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.61, y: -11.42, z: -10}
+  m_LocalPosition: {x: 43.77, y: -28.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,9 +575,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fdb10606950ae9489815ba37b3016cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 500662372}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

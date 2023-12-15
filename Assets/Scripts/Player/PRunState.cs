@@ -7,14 +7,19 @@ namespace Player
     {
         public PRunState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
-           
-           
+
+            
 
         }
         
         public override void Enter()
         {
             base.Enter();
+            _audioSource.clip = _walkingSound;
+            _audioSource.loop = true;
+            _audioSource.pitch = 0.72f;
+            _audioSource.volume = 0.85f;
+            _audioSource.Play();
             _speed = _runSpeed; 
         }
 
@@ -28,9 +33,10 @@ namespace Player
             _animator.SetFloat(a_floSpeed, _direction.magnitude);
 
             int tmpDirListId = _dirListId;
-            if (tmpDirListId == _dirListCap - 1) tmpDirListId = 0;
+            if (tmpDirListId >= _dirListCap - 1) tmpDirListId = 0;
             else tmpDirListId++;
 
+            Debug.Log("id: " + tmpDirListId);
             float tmpX = _dirList[tmpDirListId].Key;
             float tmpY = _dirList[tmpDirListId].Value;
             
@@ -58,6 +64,8 @@ namespace Player
         public override void Exit()
         {
             base.Exit();
+            _audioSource.Stop();
+            
             
             
         }
