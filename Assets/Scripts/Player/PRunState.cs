@@ -36,16 +36,13 @@ namespace Player
             if (tmpDirListId >= _dirListCap - 1) tmpDirListId = 0;
             else tmpDirListId++;
 
-            Debug.Log("id: " + tmpDirListId);
             float tmpX = _dirList[tmpDirListId].Key;
             float tmpY = _dirList[tmpDirListId].Value;
             
             
-   
-            // Debug.Log("tmpx: " + tmpX + ", tmpy: " + tmpY);
+            Debug.Log("spe: " + _speed);   
             SavePrevDir(tmpX, ref _prevDir.x);
             SavePrevDir(tmpY, ref _prevDir.y);
-            // Debug.Log("The prev Dir" + _prevDir);
         }
         
         public void SavePrevDir(float a, ref float prev)

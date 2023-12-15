@@ -12,8 +12,6 @@ namespace Enemy
         protected AudioSource _audioSource;
         protected Animator _animator;
         protected Rigidbody2D _rigidbody2D;
-        protected GameObject _target;
-        
 
         protected float _attackRange;
         public EAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
@@ -24,8 +22,6 @@ namespace Enemy
             _animator = _eStateMachine._animator;
             
             _rigidbody2D = _eStateMachine._rigidbody2D;
-
-            _target = _eStateMachine._target;
             _attackRange = _eStateMachine._attackRange;
 
         }

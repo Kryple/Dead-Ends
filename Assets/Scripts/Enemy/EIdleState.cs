@@ -10,7 +10,7 @@ namespace Enemy
         public EIdleState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
            
-            _eStateMachine.ChangeState(_eStateMachine._eRunState);
+           
             
         }
         
@@ -18,6 +18,7 @@ namespace Enemy
         
         public override void Enter()
         {
+            _eStateMachine.ChangeState(_eStateMachine._eRunState);
             base.Enter();
         }
 

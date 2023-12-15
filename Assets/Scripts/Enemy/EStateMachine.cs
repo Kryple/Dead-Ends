@@ -20,15 +20,11 @@ namespace Enemy
         public Animator _animator;
         public Collider _collider;
         public Rigidbody2D _rigidbody2D;
-        public GameObject _target;
 
         public float _attackRange = 0.4f;
 
         private void Awake()
         {
-            _target = GameObject.FindWithTag("Player");
-            if (_target == null) 
-                Debug.Log("Player: " + _target);
             
             _audioSource = GetComponent<AudioSource>();
             if (_audioSource == null)
@@ -50,6 +46,7 @@ namespace Enemy
             _eIdleState = new EIdleState("EIdleState", this);
             _eRunState = new ERunState("ERunState", this);
             _eAttackState = new EAttackState("EAttackState", this);
+            _eDieState = new EDieState("EDieState", this);
 
         }
 
