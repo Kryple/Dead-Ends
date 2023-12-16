@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FSM;
+using Pathfinding;
 using UnityEngine;
 
 namespace Enemy
@@ -12,18 +13,17 @@ namespace Enemy
         protected AudioSource _audioSource;
         protected Animator _animator;
         protected Rigidbody2D _rigidbody2D;
-
-        protected float _attackRange;
+        protected Transform _target;
+        protected Seeker _seeker;
+        
         public EAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
             _eStateMachine = (EStateMachine) stateMachine;
-
             _audioSource = _eStateMachine._audioSource;
             _animator = _eStateMachine._animator;
-            
             _rigidbody2D = _eStateMachine._rigidbody2D;
-            _attackRange = _eStateMachine._attackRange;
-
+            _target = _eStateMachine._target;
+            _seeker = _eStateMachine._seeker;
         }
         
         public override void Enter()
@@ -45,6 +45,8 @@ namespace Enemy
         {
             base.Exit();
         }
+        
+ 
 
         
         

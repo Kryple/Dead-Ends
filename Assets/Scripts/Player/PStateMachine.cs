@@ -23,6 +23,7 @@ namespace Player
         public Animator _animator;
         public SpriteRenderer _spriteRenderer;
         public AudioClip _walkingSound;
+        public Transform _transform;
 
         private void Awake()
         {
@@ -31,6 +32,7 @@ namespace Player
             TryGetComponent<Rigidbody2D>(out _rigidbody2D);
             TryGetComponent<Animator>(out _animator);
             TryGetComponent<SpriteRenderer>(out _spriteRenderer);
+            TryGetComponent<Transform>(out _transform);
             
             // _audioSource = GetComponent<AudioSource>();
             // _collider2D = GetComponent<Collider2D>();

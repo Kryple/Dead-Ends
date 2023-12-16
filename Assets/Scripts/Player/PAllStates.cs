@@ -14,6 +14,7 @@ namespace Player
         protected Animator _animator;
         protected SpriteRenderer _spriteRenderer;
         protected AudioClip _walkingSound;
+        protected Transform _transform;
 
         protected static float _horizontalInput; 
         protected static float _verticalInput; 
@@ -36,18 +37,7 @@ namespace Player
         //Contain player's direction coordinates in 12 latest frames
         protected List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>()
         {
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f),
-            new KeyValuePair<float, float>(0f, 0f)
+      
             
         };  
         
@@ -63,6 +53,7 @@ namespace Player
             _animator = _pStateMachine._animator;
             _spriteRenderer = _pStateMachine._spriteRenderer;
             _walkingSound = _pStateMachine._walkingSound;
+            _transform = _pStateMachine._transform;
 
 
             // _pStateMachine.CheckComponentNull(_audioSource);
@@ -70,6 +61,11 @@ namespace Player
             // _pStateMachine.CheckComponentNull(_rigidbody2D);
             // _pStateMachine.CheckComponentNull(_animator);
             // _pStateMachine.CheckComponentNull(_spriteRenderer);
+            
+            
+            //Initial value for the directionList
+            for (int i = 0; i < _dirListCap; i++)
+                _dirList.Add(new KeyValuePair<float, float>(0f, 0f));
         }
         
       

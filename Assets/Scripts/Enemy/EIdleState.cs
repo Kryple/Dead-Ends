@@ -1,4 +1,5 @@
-﻿using FSM;
+﻿using System.Threading.Tasks;
+using FSM;
 using UnityEngine;
 
 namespace Enemy
@@ -18,8 +19,8 @@ namespace Enemy
         
         public override void Enter()
         {
-            _eStateMachine.ChangeState(_eStateMachine._eRunState);
             base.Enter();
+            ChangeToRun();
         }
 
         public override void UpdateLogic()
@@ -35,6 +36,13 @@ namespace Enemy
         public override void Exit()
         {
             base.Exit();
+        }
+
+        async void ChangeToRun()
+        {
+            // wait for the enemy to be spawned, then change to its runState
+            await Task.Delay(230);
+            _eStateMachine.ChangeState(_eStateMachine._eRunState);
         }
     }
 }

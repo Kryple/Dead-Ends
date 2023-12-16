@@ -6,6 +6,8 @@ namespace Enemy
     public class EAttackState : EAllStates
     {
         private string a_Attack = "Attack";
+        private Vector3 _targetPosi = new Vector3();
+        
         public EAttackState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
             
@@ -16,11 +18,13 @@ namespace Enemy
             _animator.SetTrigger(a_Attack);
             _rigidbody2D.velocity = new Vector2(0f, 0f);
             base.Enter();
+            
         }
 
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            
         }
 
         public override void UpdatePhysics()
@@ -32,5 +36,7 @@ namespace Enemy
         {
             base.Exit();
         }
+        
+        
     }
 }

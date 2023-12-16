@@ -32,15 +32,14 @@ namespace Player
             
             _animator.SetFloat(a_floSpeed, _direction.magnitude);
 
+            //store the player's direction of the previous 12th frame as the previous direction 
             int tmpDirListId = _dirListId;
             if (tmpDirListId >= _dirListCap - 1) tmpDirListId = 0;
             else tmpDirListId++;
-
+            
             float tmpX = _dirList[tmpDirListId].Key;
             float tmpY = _dirList[tmpDirListId].Value;
             
-            
-            Debug.Log("spe: " + _speed);   
             SavePrevDir(tmpX, ref _prevDir.x);
             SavePrevDir(tmpY, ref _prevDir.y);
         }
@@ -55,15 +54,17 @@ namespace Player
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
-            _rigidbody2D.AddForce(_direction * _speed);
+            Vector3 scaledDirect = _direction * _speed;
+            _transform.Translate(scaledDirect * Time.deltaTime);;
+            
+            //2nd way:
+            //_transform.position = Vector3.MoveTowards(_transform.position, _transform.position + _direction * _speed, Time.deltaTime);
         }
 
         public override void Exit()
         {
             base.Exit();
             _audioSource.Stop();
-            
-            
             
         }
     }

@@ -14,7 +14,7 @@ namespace Player
         protected static string a_isMoving = "booIsMoving";
 
         
-        protected static float _runSpeed = 12.2f; //player's speed when running
+        protected static float _runSpeed = 5.2f; //player's speed when running
         protected static float _dashSpeed = _runSpeed * 7.5f; //player's speed when dashing
         protected static float _speed = _runSpeed; //current player's speed
 
@@ -22,11 +22,7 @@ namespace Player
 
         public PPatrolState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
-            // _pStateMachine = (PStateMachine) stateMachine;
-            
             _audioSource = _pStateMachine._audioSource;
-            
-            // _pStateMachine.CheckComponentNull(_audioSource);
         }
 
         public override void Enter()

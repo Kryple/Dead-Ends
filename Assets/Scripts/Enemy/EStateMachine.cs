@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 
 using FSM;
+using Pathfinding;
 
 namespace Enemy
 {
@@ -18,42 +19,42 @@ namespace Enemy
 
         public AudioSource _audioSource;
         public Animator _animator;
-        public Collider _collider;
+        public Collider2D _collider2D;
         public Rigidbody2D _rigidbody2D;
-
-        public float _attackRange = 0.4f;
-
+        public Transform _target;
+        public Seeker _seeker;
+        
         private void Awake()
         {
             
             _audioSource = GetComponent<AudioSource>();
-            if (_audioSource == null)
-                Debug.Log("AudioSource: " + _audioSource);
-
             _animator = GetComponent<Animator>();
-            if (_animator == null)
-                Debug.Log("Animtor: " + _animator);
-
-            _collider = GetComponent<Collider>();
-            if (_collider == null)
-                Debug.Log("Collider: " + _collider);
-
+            _collider2D = GetComponent<Collider2D>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            if (_rigidbody2D == null)
-                Debug.Log("Rigidbody2D: " + _rigidbody2D);
+            _target = GameObject.FindWithTag("Player").transform;
+            _seeker = GetComponent<Seeker>();
 
 
             _eIdleState = new EIdleState("EIdleState", this);
             _eRunState = new ERunState("ERunState", this);
             _eAttackState = new EAttackState("EAttackState", this);
             _eDieState = new EDieState("EDieState", this);
+            
+            InvokeRepeating("UpdatePathInRunState", 0f, 0.55f);
 
         }
+        
+        
 
 
         protected override BaseState GetInitialState()
         {
             return _eIdleState;
+        }
+
+        public void UpdatePathInRunState()
+        {
+            _eRunState.UpdatePath();
         }
 
         public void ChangeToRun()
@@ -66,8 +67,14 @@ namespace Enemy
             ChangeState(_eDieState);
         }
 
-
-
-
+        //Make sure that the current script had implemented MonoBehaviour
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            Debug.Log("Triggering");
+            if (other.CompareTag("Player"))
+            {
+                ChangeState(_eAttackState);
+            }
+        }
     }
 }
