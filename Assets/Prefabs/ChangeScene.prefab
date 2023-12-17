@@ -35,7 +35,6 @@ RectTransform:
   m_Children:
   - {fileID: 4695058057262569688}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -142,6 +141,7 @@ MonoBehaviour:
   _compressedClip: {fileID: 8300000, guid: ca526594597815f48a25f72688a09b04, type: 3}
   _uncompressedClip: {fileID: 8300000, guid: ce59901c21c0756479e66ecb6c2bf077, type: 3}
   _audioSource: {fileID: 4695058055567004637}
+  _transitionTime: 0.1
   _sceneId: 1
 --- !u!82 &4695058055567004637
 AudioSource:
@@ -270,7 +270,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4695058055567004633}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -307,8 +306,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 161f8113cfafad5448c719e7bcf2030f, type: 2}
-  m_sharedMaterial: {fileID: 254367480523916294, guid: 161f8113cfafad5448c719e7bcf2030f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -332,8 +331,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 109.5
-  m_fontSizeBase: 109.5
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

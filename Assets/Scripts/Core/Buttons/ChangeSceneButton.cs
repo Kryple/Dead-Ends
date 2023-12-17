@@ -36,6 +36,8 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
             Debug.LogWarning("_rectTransform is null");
         }
     }
+    
+    //OnPointerUp is called after: Release after Click, Drag Release, Cancel Drag
     public void OnPointerUp(PointerEventData eventData)
     {
         _image.sprite = _default;

@@ -637,6 +637,14 @@ PrefabInstance:
       propertyPath: _pressed
       value: 
       objectReference: {fileID: 73065931, guid: 5494c9a7a0d2c6b44a3bad9921af83f8, type: 3}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _compressedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6803097a36c10e34f9571be8ab2ea95f, type: 3}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _uncompressedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 026d94bce175c654fb5616f4caf43bd5, type: 3}
     - target: {fileID: 4695058057262569689, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_fontSize
       value: 59.8
