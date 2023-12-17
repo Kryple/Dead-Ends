@@ -15,6 +15,10 @@ namespace Enemy
         protected Rigidbody2D _rigidbody2D;
         protected Transform _target;
         protected Seeker _seeker;
+        protected Transform _self;
+
+        private static float _timeElapsed = 0f;
+        private static float _coolDownForNextAttack = 3f;
         
         public EAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
@@ -24,6 +28,7 @@ namespace Enemy
             _rigidbody2D = _eStateMachine._rigidbody2D;
             _target = _eStateMachine._target;
             _seeker = _eStateMachine._seeker;
+            _self = _eStateMachine._self;
         }
         
         public override void Enter()
@@ -34,6 +39,7 @@ namespace Enemy
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            _timeElapsed += Time.deltaTime;
         }
 
         public override void UpdatePhysics()
@@ -45,8 +51,17 @@ namespace Enemy
         {
             base.Exit();
         }
-        
- 
+
+
+        public void ChangeToAttack()
+        {
+            if (_timeElapsed > _coolDownForNextAttack)
+            {
+                _eStateMachine.ChangeState(_eStateMachine._eAttackState);
+                _timeElapsed = 0f;
+            }
+            
+        }
 
         
         

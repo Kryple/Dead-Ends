@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace FSM
 {
-    public class BaseState
+    public class BaseState 
     {
         public string name; //Dùng để debug: cho biêt tên của State hiện tại 
         protected StateMachine stateMachine;

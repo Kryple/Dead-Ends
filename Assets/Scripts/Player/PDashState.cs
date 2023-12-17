@@ -33,15 +33,9 @@ namespace Player
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
-            //First way:
-            // _rigidbody2D.AddForce(_direction * _speed);
-
-            //Second way:
             //Multiplying large values (e.g., _direction) with a small values (Time.deltaTime) can lead to loss of precision in floating-point calculations
             Vector3 scaledDirect = _direction * _speed;
             _transform.Translate(scaledDirect * Time.deltaTime);
-            
-            
 
         }
 

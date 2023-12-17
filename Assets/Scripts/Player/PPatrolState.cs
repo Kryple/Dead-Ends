@@ -6,8 +6,6 @@ namespace Player
 {
     public class PPatrolState : PAllStates
     {
-        protected AudioSource _audioSource;
-        
         protected static string a_floSpeed = "floSpeed";
         
         protected static string a_dash = "triDash";
@@ -22,7 +20,7 @@ namespace Player
 
         public PPatrolState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
-            _audioSource = _pStateMachine._audioSource;
+  
         }
 
         public override void Enter()

@@ -1,4 +1,5 @@
-﻿using FSM;
+﻿using System.Threading.Tasks;
+using FSM;
 using UnityEngine;
 
 namespace Enemy
@@ -6,7 +7,8 @@ namespace Enemy
     public class EAttackState : EAllStates
     {
         private string a_Attack = "Attack";
-        private Vector3 _targetPosi = new Vector3();
+        
+        
         
         public EAttackState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
@@ -15,17 +17,40 @@ namespace Enemy
         
         public override void Enter()
         {
-            _animator.SetTrigger(a_Attack);
-            _rigidbody2D.velocity = new Vector2(0f, 0f);
             base.Enter();
+            _animator.SetTrigger(a_Attack);
+            _eStateMachine.AttackMotion(_self.position);
+            ChangeToRun();
+
+        }
+        
+        public async void ChangeToRun()
+        {
+            await Task.Delay(1000);
+            _eStateMachine.ChangeState(_eStateMachine._eRunState);
+            
+            
+            
             
         }
+
 
         public override void UpdateLogic()
         {
             base.UpdateLogic();
             
+            
+            
         }
+
+
+        
+
+        /*
+         
+         */
+        
+        
 
         public override void UpdatePhysics()
         {
@@ -36,6 +61,7 @@ namespace Enemy
         {
             base.Exit();
         }
+
         
         
     }

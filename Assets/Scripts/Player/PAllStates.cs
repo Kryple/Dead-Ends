@@ -35,11 +35,7 @@ namespace Player
         protected static int _dirListCap = 12; //The capacity of _dirlist
         
         //Contain player's direction coordinates in 12 latest frames
-        protected List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>()
-        {
-      
-            
-        };  
+        protected List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>() { };  
         
         protected int _dirListId;//The index variable used for _posList 
 
