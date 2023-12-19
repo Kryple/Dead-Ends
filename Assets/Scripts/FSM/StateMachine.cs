@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Observer_Pattern;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace FSM
 {
-    public class StateMachine : MonoBehaviour
+    public class StateMachine : Subject
     {
         BaseState _currentState;
     void Start()

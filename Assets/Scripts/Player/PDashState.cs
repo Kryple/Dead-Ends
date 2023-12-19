@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,7 +37,6 @@ namespace Player
             //Multiplying large values (e.g., _direction) with a small values (Time.deltaTime) can lead to loss of precision in floating-point calculations
             Vector3 scaledDirect = _direction * _speed;
             _transform.Translate(scaledDirect * Time.deltaTime);
-
         }
 
         public override void Exit()
@@ -49,7 +49,7 @@ namespace Player
 
         public async void ChangeToIdle()
         {
-            await Task.Delay(100);
+            await Task.Delay(TimeSpan.FromSeconds(_dashTime));
             _pStateMachine.ChangeState(_pStateMachine._pIdleState);
 
         }

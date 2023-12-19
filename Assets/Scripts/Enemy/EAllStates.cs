@@ -26,7 +26,7 @@ namespace Enemy
             _audioSource = _eStateMachine._audioSource;
             _animator = _eStateMachine._animator;
             _rigidbody2D = _eStateMachine._rigidbody2D;
-            _target = _eStateMachine._target;
+            _target = _eStateMachine._player;
             _seeker = _eStateMachine._seeker;
             _self = _eStateMachine._self;
         }

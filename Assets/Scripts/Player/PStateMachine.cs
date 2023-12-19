@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using Core.Observer_Pattern;
 using FSM;
 using UnityEngine.Serialization;
 
 namespace Player
 {
-    public class PStateMachine : StateMachine
+    //Extend IObserver to become an Observer
+    public class PStateMachine : StateMachine, IObserver
     {
 
         [HideInInspector] public PIdleState _pIdleState;
         [HideInInspector] public PRunState _PRunState;
         [HideInInspector] public PDashState _pDashState;
         [HideInInspector] public PAttackState _pAttackState;
+        [HideInInspector] public PAllStates _pAllStates;
 
         public AudioSource _audioSource;
         [FormerlySerializedAs("Something")] public Collider2D _collider2D;
@@ -24,6 +26,7 @@ namespace Player
         public SpriteRenderer _spriteRenderer;
         public AudioClip _walkingSound;
         public Transform _transform;
+        
 
         private void Awake()
         {
@@ -52,6 +55,7 @@ namespace Player
             _PRunState = new PRunState("PRunState", this);
             _pDashState = new PDashState("PDashState", this);
             _pAttackState = new PAttackState("PAttackState", this);
+            _pAllStates = new PAllStates("PAllStates", this);
 
         }
         
@@ -74,7 +78,15 @@ namespace Player
             ChangeState(_pIdleState);
         }
 
+        public void OnNotify(IEvent @event)
+        {
+            if (@event == IEvent.OnPlayerGetHurt)
+            {
+                _pAllStates.PlayerGetHurt(1);
+            }
+        }
 
+        
 
 
 

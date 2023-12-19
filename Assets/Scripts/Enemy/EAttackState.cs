@@ -28,10 +28,6 @@ namespace Enemy
         {
             await Task.Delay(1000);
             _eStateMachine.ChangeState(_eStateMachine._eRunState);
-            
-            
-            
-            
         }
 
 

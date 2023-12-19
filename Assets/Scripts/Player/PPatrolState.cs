@@ -13,8 +13,9 @@ namespace Player
 
         
         protected static float _runSpeed = 5.2f; //player's speed when running
-        protected static float _dashSpeed = _runSpeed * 7.5f; //player's speed when dashing
+        protected static float _dashSpeed = _runSpeed * 4.5f; //player's speed when dashing
         protected static float _speed = _runSpeed; //current player's speed
+        protected static float _dashTime = 0.12f; //Amount of time that the dashing action needs
 
         
 

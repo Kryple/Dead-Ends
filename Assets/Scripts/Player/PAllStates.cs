@@ -7,40 +7,48 @@ namespace Player
 {
     public class PAllStates : BaseState
     {
-        protected PStateMachine _pStateMachine;
-        protected AudioSource _audioSource;
-        protected Collider2D _collider2D;
-        protected Rigidbody2D _rigidbody2D;
-        protected Animator _animator;
-        protected SpriteRenderer _spriteRenderer;
-        protected AudioClip _walkingSound;
-        protected Transform _transform;
+        protected static PStateMachine _pStateMachine;
+        protected static AudioSource _audioSource;
+        protected static Collider2D _collider2D;
+        protected static Rigidbody2D _rigidbody2D;
+        protected static Animator _animator;
+        protected static SpriteRenderer _spriteRenderer;
+        protected static AudioClip _walkingSound;
+        protected static Transform _transform;
 
         protected static float _horizontalInput; 
         protected static float _verticalInput; 
-        protected Vector2 _direction; //the direction character is facing 
+        protected static Vector2 _direction; //the direction character is facing 
 
         protected static Vector2 _prevDir = new Vector2(); //The previous player's direction. This has to be static to prevent different State using different _preDir
         protected static string a_floPosX = "floPosX";
         protected static string a_floPosY = "floPosY";
         
-        
         protected static float _timeCountAttackCombo = 0; //the time amount has passed since the last attack
         protected static float _countAttackComboDefaultValue = -1f; //Initial value for the _countAttackCombo
-        protected static float _countAttackCombo = _countAttackComboDefaultValue; // the current value represent for the attack animation's threshold,
+        protected static float _countAttackCombo = _countAttackComboDefaultValue; // the current value represent for the attack animation's threshold
+        protected static float _timeLimit = 3.5f; //max interval time between 2 attack in a combo
 
-        protected float _timeLimit = 3.5f; //max interval time between 2 attack in a combo
-
-
+        
         protected static int _dirListCap = 12; //The capacity of _dirlist
         
         //Contain player's direction coordinates in 12 latest frames
-        protected List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>() { };  
+        protected static List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>() { };  
         
-        protected int _dirListId;//The index variable used for _posList 
+        protected static int _dirListId;//The index variable used for _posList
+        protected static int lives = 3;
+        
 
         public PAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
+            
+        }
+        
+      
+            
+        public override void Enter()
+        {
+            base.Enter();
             _pStateMachine = (PStateMachine) stateMachine;
 
             _audioSource = _pStateMachine._audioSource;
@@ -62,13 +70,6 @@ namespace Player
             //Initial value for the directionList
             for (int i = 0; i < _dirListCap; i++)
                 _dirList.Add(new KeyValuePair<float, float>(0f, 0f));
-        }
-        
-      
-            
-        public override void Enter()
-        {
-            base.Enter();
             
         }
 
@@ -91,18 +92,17 @@ namespace Player
                 _dirListId++;    
             }
             
-            
-            
-            
-            
             _direction.x = _horizontalInput;
             _direction.y = _verticalInput;
 
             _timeCountAttackCombo += Time.deltaTime;
-            
+        }
 
-            
-            
+
+        public void PlayerGetHurt(int damage)
+        {
+            lives -= damage;
+            Debug.Log("Live: " + lives);
         }
     }
 }

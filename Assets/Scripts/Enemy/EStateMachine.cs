@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using Core.Observer_Pattern;
 using FSM;
 using Pathfinding;
+using Player;
+using UnityEngine.Serialization;
 
 namespace Enemy
 {
+    
     public class EStateMachine : StateMachine
     {
 
@@ -22,9 +25,10 @@ namespace Enemy
         public Animator _animator;
         public Collider2D _collider2D;
         public Rigidbody2D _rigidbody2D;
-        public Transform _target;
+        [FormerlySerializedAs("_target")] public Transform _player;
         public Seeker _seeker;
         public Transform _self;
+        
         
         private void Awake()
         {
@@ -33,7 +37,7 @@ namespace Enemy
             _animator = GetComponent<Animator>();
             _collider2D = GetComponent<Collider2D>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            _target = GameObject.FindWithTag("Player").transform;
+            _player = GameObject.FindWithTag("Player").transform;
             _seeker = GetComponent<Seeker>();
             _self = this.transform;
 
@@ -45,7 +49,9 @@ namespace Enemy
             _eAllStates = new EAllStates("EAllState", this);
             
             InvokeRepeating("UpdatePathInRunState", 0f, 0.55f);
-
+            
+            //Player observing EStateMachine from now            
+            AddObserver(_player.GetComponent<PStateMachine>());
         }
         
         
@@ -74,7 +80,7 @@ namespace Enemy
         //Make sure that the current script had implemented MonoBehaviour
         private void OnTriggerStay2D(Collider2D other)
         {
-            Debug.Log("Triggering");
+            // Debug.Log("Triggering");
             if (other.CompareTag("Player"))
             {
                 _eAllStates.ChangeToAttack();
@@ -86,7 +92,7 @@ namespace Enemy
         {
             //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
             int cnt = 0;
-            StartCoroutine(LerpToTarget(originalPosition, _target.position, 0.5f, cnt));
+            StartCoroutine(LerpToTarget(originalPosition, _player.position, 0.5f, cnt));
            
         }
         
@@ -104,6 +110,8 @@ namespace Enemy
             //If this is the second time this Coroutine is called, then break it
             if (cntTimes >= 1)
                 yield break;
+            
+            NotifyObservers(IEvent.OnPlayerGetHurt);
             
             cntTimes++;
             StartCoroutine(LerpToTarget(target, origin, 0.5f, cntTimes));
