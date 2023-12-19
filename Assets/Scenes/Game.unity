@@ -443,6 +443,7 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 0}
   _walkingSound: {fileID: 8300000, guid: 74424c5323f003f448397adc4a1d8cc5, type: 3}
   _transform: {fileID: 0}
+  _inGameUIController: {fileID: 0}
 --- !u!82 &500662375
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1019,8 +1020,8 @@ GameObject:
   - component: {fileID: 1135257633}
   - component: {fileID: 1135257632}
   m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: In Game UI
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1178,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -5500166823713764820, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: -1848614244353273545, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
       propertyPath: m_Name
       value: TiledDemo
@@ -1302,7 +1307,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.47
-  m_PointLightOuterRadius: 5.63
+  m_PointLightOuterRadius: 6.86
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -1665,7 +1670,7 @@ GameObject:
   - component: {fileID: 1034206185}
   - component: {fileID: 1034206184}
   - component: {fileID: 1034206193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DarkBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
