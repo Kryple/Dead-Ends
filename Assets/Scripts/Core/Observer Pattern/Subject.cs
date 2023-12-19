@@ -24,7 +24,7 @@ namespace Core.Observer_Pattern
             _observers.Remove(observer);
         }
 
-        protected void NotifyObservers(string action)
+        public void NotifyObservers(string action)
         {
             _observers.ForEach((_observer) =>
             {
@@ -32,7 +32,7 @@ namespace Core.Observer_Pattern
             });
         }
 
-        protected void NotifyObservers(IEvent e)
+        public void NotifyObservers(IEvent e)
         {
             _observers.ForEach((_observer) =>
             {
@@ -40,7 +40,7 @@ namespace Core.Observer_Pattern
             });
         }
 
-        protected void NotifyObservers()
+        public void NotifyObservers()
         {
             _observers.ForEach((_observer) =>
             {

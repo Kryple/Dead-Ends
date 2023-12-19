@@ -36,15 +36,13 @@ namespace Player
         protected static List<KeyValuePair<float, float>> _dirList = new List<KeyValuePair<float, float>>() { };  
         
         protected static int _dirListId;//The index variable used for _posList
-        protected static int lives = 3;
+        protected static int _lives = 3;
         
 
         public PAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
             
         }
-        
-      
             
         public override void Enter()
         {
@@ -76,6 +74,9 @@ namespace Player
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            
+            
+            
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
             
@@ -101,8 +102,15 @@ namespace Player
 
         public void PlayerGetHurt(int damage)
         {
-            lives -= damage;
-            Debug.Log("Live: " + lives);
+            Debug.Log("Live: " + _lives);
+            _lives -= damage;
+            if (_lives <= 0)
+                _pStateMachine.ChangeState(_pStateMachine._pDieState);
+        }
+
+        public void ResetStat()
+        {
+            _lives = 3;
         }
     }
 }

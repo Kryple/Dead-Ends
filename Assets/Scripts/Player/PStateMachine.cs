@@ -17,7 +17,8 @@ namespace Player
         [HideInInspector] public PRunState _PRunState;
         [HideInInspector] public PDashState _pDashState;
         [HideInInspector] public PAttackState _pAttackState;
-        [HideInInspector] public PAllStates _pAllStates;
+        [HideInInspector] public PDieState _pDieState;
+         [HideInInspector] public PAllStates _pAllStates;
 
         public AudioSource _audioSource;
         [FormerlySerializedAs("Something")] public Collider2D _collider2D;
@@ -26,6 +27,7 @@ namespace Player
         public SpriteRenderer _spriteRenderer;
         public AudioClip _walkingSound;
         public Transform _transform;
+        public InGameUIController _inGameUIController;
         
 
         private void Awake()
@@ -36,6 +38,7 @@ namespace Player
             TryGetComponent<Animator>(out _animator);
             TryGetComponent<SpriteRenderer>(out _spriteRenderer);
             TryGetComponent<Transform>(out _transform);
+            _inGameUIController = GameObject.FindWithTag("UI").GetComponent<InGameUIController>();
             
             // _audioSource = GetComponent<AudioSource>();
             // _collider2D = GetComponent<Collider2D>();
@@ -56,7 +59,10 @@ namespace Player
             _pDashState = new PDashState("PDashState", this);
             _pAttackState = new PAttackState("PAttackState", this);
             _pAllStates = new PAllStates("PAllStates", this);
+            _pDieState = new PDieState("PDieState", this);
 
+            //InGameUIControllder observing PStateMachine from now
+            AddObserver(_inGameUIController);
         }
         
         public void CheckComponentNull(Component component)
@@ -85,7 +91,9 @@ namespace Player
                 _pAllStates.PlayerGetHurt(1);
             }
         }
-
+        
+        
+        
         
 
 

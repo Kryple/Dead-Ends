@@ -3,7 +3,8 @@
     public enum IEvent
     {
         OnEnemyGetHurt,
+        OnEnemyDie,
         OnPlayerGetHurt,
-        
+        OnPlayerDie
     }
 }

@@ -50,7 +50,7 @@ namespace Enemy
             
             InvokeRepeating("UpdatePathInRunState", 0f, 0.55f);
             
-            //Player observing EStateMachine from now            
+            //PStateMachine observing EStateMachine from now            
             AddObserver(_player.GetComponent<PStateMachine>());
         }
         

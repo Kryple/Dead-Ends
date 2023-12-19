@@ -21,7 +21,7 @@ namespace Player
 
         public PPatrolState(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
-  
+            
         }
 
         public override void Enter()
