@@ -14,7 +14,6 @@ namespace Enemy
     
     public class EStateMachine : StateMachine
     {
-
         [HideInInspector] public EIdleState _eIdleState;
         [HideInInspector] public ERunState _eRunState;
         [HideInInspector] public EAttackState _eAttackState;
@@ -84,7 +83,6 @@ namespace Enemy
             if (other.CompareTag("Player"))
             {
                 _eAllStates.ChangeToAttack();
-                
             }
         }
 

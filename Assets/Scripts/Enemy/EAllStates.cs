@@ -40,11 +40,18 @@ namespace Enemy
         {
             base.UpdateLogic();
             _timeElapsed += Time.deltaTime;
+
+            //Change the enemy's face direction depends on the force apply to it 
+            if (_rigidbody2D.totalForce.x >= 0.001f)
+                _self.localScale = new Vector3(-1f, 1f, 1f);
+            else if (_rigidbody2D.totalForce.x <= -0.001f)
+                _self.localScale = new Vector3(1f, 1f, 1f);
         }
 
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
+            
         }
 
         public override void Exit()

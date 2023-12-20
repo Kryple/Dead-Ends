@@ -1332,6 +1332,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Player's avatar
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 227
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e446594999d4194da10f44b7f80dee9
+      internalID: -653975948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player's live
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 227
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f45e090c937814488029c081f9f1d1
+      internalID: 661620944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1396,11 +1438,12 @@ TextureImporter:
       GUI_54: 1001261664
       GUI_55: -1051013140
       GUI_56: -1140511229
-      GUI_57: -653975948
       GUI_6: -2001524456
       GUI_7: -1638299073
       GUI_8: 374231921
       GUI_9: 916846394
+      Player's avatar: -653975948
+      Player's live: 661620944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

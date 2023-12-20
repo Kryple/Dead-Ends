@@ -7,7 +7,7 @@ public class LightFlickering : MonoBehaviour
     [SerializeField] private Light2D light; // Reference to your SpotLight2D
     [SerializeField] private float minIntensity = 0.64f; // Minimum intensity during flicker
     [SerializeField] private float maxIntensity = 1.35f; // Maximum intensity during flicker
-    [SerializeField] float flickerSpeed = 0.7f; // Flicker frequency (changes per second)
+    [SerializeField] float flickerSpeed = 5f; // Flicker frequency (changes per second)
 
     private float flickerTimer; // Timer for controlling flicker cycle
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core.Observer_Pattern;
 using FSM;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
@@ -106,6 +107,8 @@ namespace Player
             _lives -= damage;
             if (_lives <= 0)
                 _pStateMachine.ChangeState(_pStateMachine._pDieState);
+            
+            _pStateMachine.NotifyObservers(IEvent.OnPlayerGetHurt);
         }
 
         public void ResetStat()
