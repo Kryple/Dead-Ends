@@ -86,15 +86,33 @@ namespace Enemy
             }
         }
 
+        //The motion of enemy when attack the player
         public void AttackMotion(Vector3 originalPosition)
         {
             //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
             int cnt = 0;
-            StartCoroutine(LerpToTarget(originalPosition, _player.position, 0.5f, cnt));
+            StartCoroutine(LerpToTarget(originalPosition, _player, 0.5f));
            
         }
         
-        IEnumerator LerpToTarget(Vector3 origin, Vector3 target, float duration, int cntTimes)
+        //Enemy lerp to the player
+        IEnumerator LerpToTarget(Vector3 origin, Transform target, float duration)
+        {
+            float timeElapsed = 0.0f;
+            
+            while (timeElapsed < duration)
+            {
+                transform.position = Vector3.Lerp(origin, target.position, timeElapsed / duration);
+                timeElapsed += Time.deltaTime;
+                yield return null; // Wait for next frame to update position
+            }
+            
+            NotifyObservers(IEvent.OnPlayerGetHurt);
+            LerpToOriginalPosition(_self.position, origin, 0.5f);
+        }
+        
+        //Enemy lerp back to the origin position
+        IEnumerator LerpToOriginalPosition(Vector3 origin, Vector3 target, float duration)
         {
             float timeElapsed = 0.0f;
             
@@ -104,18 +122,11 @@ namespace Enemy
                 timeElapsed += Time.deltaTime;
                 yield return null; // Wait for next frame to update position
             }
-
-            //If this is the second time this Coroutine is called, then break it
-            if (cntTimes >= 1)
-                yield break;
-            
-            NotifyObservers(IEvent.OnPlayerGetHurt);
-            
-            cntTimes++;
-            StartCoroutine(LerpToTarget(target, origin, 0.5f, cntTimes));
-            
-            yield return null;
         }
+        
+        
+        
+        
         
     }
 }
