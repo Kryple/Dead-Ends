@@ -26,8 +26,10 @@ namespace Player
         public Animator _animator;
         public SpriteRenderer _spriteRenderer;
         public AudioClip _walkingSound;
+        public AudioClip _hurtingSound;
         public Transform _transform;
         public InGameUIController _inGameUIController;
+        
         
 
         private void Awake()

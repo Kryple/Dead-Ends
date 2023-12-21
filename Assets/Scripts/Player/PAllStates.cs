@@ -15,6 +15,7 @@ namespace Player
         protected static Animator _animator;
         protected static SpriteRenderer _spriteRenderer;
         protected static AudioClip _walkingSound;
+        protected static AudioClip _hurtingSound;
         protected static Transform _transform;
 
         protected static float _horizontalInput; 
@@ -56,6 +57,7 @@ namespace Player
             _animator = _pStateMachine._animator;
             _spriteRenderer = _pStateMachine._spriteRenderer;
             _walkingSound = _pStateMachine._walkingSound;
+            _hurtingSound = _pStateMachine._hurtingSound;
             _transform = _pStateMachine._transform;
 
 
@@ -109,6 +111,12 @@ namespace Player
                 _pStateMachine.ChangeState(_pStateMachine._pDieState);
             
             _pStateMachine.NotifyObservers(IEvent.OnPlayerGetHurt);
+
+            _audioSource.clip = _hurtingSound;
+            _audioSource.loop = false;
+            _audioSource.pitch = 1f;
+            _audioSource.volume = 1f;
+            _audioSource.Play();
         }
 
         public void ResetStat()

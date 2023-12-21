@@ -18,6 +18,10 @@ namespace Enemy
         public override void Enter()
         {
             base.Enter();
+
+            _audioSource.clip = _biteSFX;
+            _audioSource.volume = 0.075f;
+            
             _animator.SetTrigger(a_Attack);
             _eStateMachine.AttackMotion(_self.position);
             ChangeToRun();
@@ -50,8 +54,10 @@ namespace Enemy
         public override void Exit()
         {
             base.Exit();
+            _audioSource.Stop();
         }
-
+        
+        
         
         
     }

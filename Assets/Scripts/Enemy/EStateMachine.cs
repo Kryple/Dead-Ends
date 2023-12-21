@@ -20,13 +20,15 @@ namespace Enemy
         [HideInInspector] public EDieState _eDieState;
         [HideInInspector] public EAllStates _eAllStates;
 
-        public AudioSource _audioSource;
-        public Animator _animator;
-        public Collider2D _collider2D;
-        public Rigidbody2D _rigidbody2D;
+        public  AudioSource _audioSource;
+        public  Animator _animator;
+        public  Collider2D _collider2D;
+        public  Rigidbody2D _rigidbody2D;
         [FormerlySerializedAs("_target")] public Transform _player;
-        public Seeker _seeker;
-        public Transform _self;
+        public  Seeker _seeker;
+        public  Transform _self;
+
+        public  AudioClip _biteSFX;
         
         
         private void Awake()
@@ -108,7 +110,8 @@ namespace Enemy
             }
             
             NotifyObservers(IEvent.OnPlayerGetHurt);
-            LerpToOriginalPosition(_self.position, origin, 0.5f);
+            _audioSource.Play();
+            StartCoroutine(LerpToOriginalPosition(_self.position, origin, 0.5f));
         }
         
         //Enemy lerp back to the origin position

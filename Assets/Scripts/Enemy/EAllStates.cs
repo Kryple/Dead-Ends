@@ -9,13 +9,14 @@ namespace Enemy
 {
     public class EAllStates : BaseState
     {
-        protected EStateMachine _eStateMachine;
-        protected AudioSource _audioSource;
-        protected Animator _animator;
-        protected Rigidbody2D _rigidbody2D;
-        protected Transform _target;
-        protected Seeker _seeker;
-        protected Transform _self;
+        protected static EStateMachine _eStateMachine;
+        protected static AudioSource _audioSource;
+        protected static Animator _animator;
+        protected static Rigidbody2D _rigidbody2D;
+        protected static Transform _target;
+        protected static Seeker _seeker;
+        protected static Transform _self;
+        protected static AudioClip _biteSFX;
 
         private static float _timeElapsed = 0f;
         private static float _coolDownForNextAttack = 3f;
@@ -29,6 +30,7 @@ namespace Enemy
             _target = _eStateMachine._player;
             _seeker = _eStateMachine._seeker;
             _self = _eStateMachine._self;
+            _biteSFX = _eStateMachine._biteSFX;
         }
         
         public override void Enter()

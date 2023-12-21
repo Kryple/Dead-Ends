@@ -18,7 +18,7 @@ namespace Player
             _audioSource.clip = _walkingSound;
             _audioSource.loop = true;
             _audioSource.pitch = 0.72f;
-            _audioSource.volume = 0.85f;
+            _audioSource.volume = 0.72f;
             _audioSource.Play();
             _speed = _runSpeed; 
         }

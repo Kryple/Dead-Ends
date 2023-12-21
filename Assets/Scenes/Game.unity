@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAA4Iewn3kZtcwIAAC4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFy2jAQ/RVG58LYDsS4t5YQ0kMSprSTCxchrbEGWfJIcoBk+PdqZRu7dMoF+e2+p923a38SoWwFzGmzMoI/aw7k64jgmXwZ9cEnONG9VhvxAV3Om+CuwCQacn5SJ7THY6RZXYIzgn1Te4nJkQdrJXJtyiXfw0JbZz2cU2nBh4x2yFYe+hyRk/8bZ0g5+1OS4unDn7JodPFHBsqBGaRGk+ksS7O7uGWM43gSpVGSZXHLHE8nGf5mQaBWTNKyAo7d9Dpp2vKnTZryfbYZqMO0lMK2RRJ3roIJm6oAA+gCF9T3HAqLJihVgNgXDjsYsl/z3IJrLTH0/CCMN6+RJd9142hJ7aEp7J3KGi9KZvehqEb0+Z/4OA7h3Ojyqbs3jvAOVwh2+EnPjFo3sHwIP/Slx8GfI5UHupPwVoB60Suja8V90JkaqbWF5KF/vLa2KIAderwp9Qasq97wbsLdfLGHS+j+tJCi3AUnpw2wkToYHtYCjB/ND19wWBrbSngUq/ht4RfdD7erDTwKY50PtV0qLG+na4OpZBk8w25qt9BGgRkqVKCodOe113G3M7yJ/Z/1SPFFam9vY937cUMJcJ8fRTehtT5ep2ULfXwGW7zWTgoFvdUYePFGLbRSzYoNW+pom9rklA1o+1rwv3eLxBAl6eyORnky5eluN87TeQpxOp8nc3bP7hgJyyeU75PKdVNoa48fm+rFlV+07vsyWhlahXXnhh5X4qPUts8UKtcbZgDUa6NwLRyMv8S/l3zJhTdoA84JFQZOPrdEanYAvr0KbUOny5MzdAhW4l07BLZkEb4nW4LwdZfXBt4FHPHujnYhlz9QSwMEFAAACAgAADgh7NylAiptAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJhqoGRualxokGakUmKeVKSbpq5hXmqobmFhZFFslmycbJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7CfeRm1zAgAALgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7NylAiptAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
+    dataString: UEsDBBQAAAgIAAA4Iex1xKLncwIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFy2jAQ/RVG55KxTYiht5YQ0kMSJqSTiy9CWmMNsuSR5ADJ8O9dyTZ26fSEeLtvte/tyl9EKFsBc9qsjOBPmgP5PiL+TL6N+uAjHOlOq434hC7nXXBX+CQacl6pExrx2NOsLsEZwX6onfTJEYK1Erk25ZLvYKGtswjnVFrAkNHOsxVCXyNyxJ/x3FNOeEpSf/rE0zwanfHIQDkwg9To5nY6T+dJOpm0nHEc30RplMxnScsdTwO3VkzSsgLuhfQlZvOWOL0LaQolthleDtNSCtv2R9ypCvo3VQEGvAFcUJQbeopuUgQKELvC+eaH7Jc8t+BaNww93QuDvjVlyU/dmFlSu28a+6Cy9hclbVNN0ad/4uM4hHOjy8fu3jjyd7hCsP0rPTFq3cDtIXzftx4Hfw5U7ulWwnsB6lmvjK4Vx6AztafWFpL7/u9F2qIAtu/xptUrsK56w7vhdqP1Gs5B/XEhRbkNTt42wEbqYHjYCDA4ml/YcNgX25ZA1Hfx28Ib3Q0Xqw08CGMdhlqVyre31bXxqWQZPPNqarfQRoEZVqhAUelOa6zjrmd4Ffs/64H6N9Te3sa6p3FFCXCfH0VXobU+XKZlC314Alu81E4KBb3VPvCMRi20Us2KDSV1tE1tcsoGtF0t+N+7RWKIknQ6oVGe3PJ0ux3n6SyFOJ3Nkhm7YxNGwvIJhTqpXDeNtvbg2FRfXOGidZ+W0crQKqw7N/SwEp+ltn2mULneMAOgXpoKl8bB4CX4LvmSCzRoA84JFQZOvjIiNdsDzy6FsqB0eXSGZn2VjFTiQzuPZGQRviUZ8fBlmdcGPgQc/OVdsTM5/wFQSwMEFAAACAgAADgh7NylAiptAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJhqoGRualxokGakUmKeVKSbpq5hXmqobmFhZFFslmycbJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7HXEoudzAgAAKgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7NylAiptAAAAeAAAAAkAJAAAAAAAAAAAAAAAwAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB4AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -548,6 +548,7 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _walkingSound: {fileID: 8300000, guid: 74424c5323f003f448397adc4a1d8cc5, type: 3}
+  _hurtingSound: {fileID: 8300000, guid: 9662db211e2bd7b48a31f47e30e9cf9d, type: 3}
   _transform: {fileID: 0}
   _inGameUIController: {fileID: 0}
 --- !u!82 &500662375
@@ -857,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,41 +996,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!70 &1034206193
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449539747666813424}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.034614902, y: 0.20228031}
-  m_Size: {x: 1.9386573, y: 1.5077164}
-  m_Direction: 1
 --- !u!1 &1068443607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1429,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -1473,7 +1439,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 2.49
-  m_PointLightOuterRadius: 4.59
+  m_PointLightOuterRadius: 5.01
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -1497,6 +1463,7 @@ GameObject:
   - component: {fileID: 1794403265}
   - component: {fileID: 1794403264}
   - component: {fileID: 1794403263}
+  - component: {fileID: 1794403268}
   m_Layer: 5
   m_Name: UIController
   m_TagString: UI
@@ -1520,6 +1487,8 @@ MonoBehaviour:
   - {fileID: 2045604040}
   - {fileID: 249813459}
   - {fileID: 1343885644}
+  _audioSource: {fileID: 0}
+  _backgroundSound: {fileID: 8300000, guid: 31b2558c8a8ea1747a36002fed6bf8df, type: 3}
   _gameOverScreen: {fileID: 966222882}
 --- !u!114 &1794403264
 MonoBehaviour:
@@ -1605,6 +1574,102 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &1794403268
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794403262}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1959468210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +2020,6 @@ GameObject:
   - component: {fileID: 8595491278810536471}
   - component: {fileID: 1034206185}
   - component: {fileID: 1034206184}
-  - component: {fileID: 1034206193}
   m_Layer: 10
   m_Name: DarkBat
   m_TagString: Enemy
@@ -2104,6 +2168,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   _seeker: {fileID: 0}
   _self: {fileID: 0}
+  _biteSFX: {fileID: 8300000, guid: daf485decaa7e024e83e4984b4938521, type: 3}
 --- !u!70 &6285534851410483126
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2136,8 +2201,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026809454, y: 0.032873876}
-  m_Size: {x: 6.808741, y: 6.075126}
+  m_Offset: {x: -0.019165767, y: -0.08251382}
+  m_Size: {x: 5.8443823, y: 5.8443823}
   m_Direction: 1
 --- !u!4 &8197123906677285546
 Transform:
