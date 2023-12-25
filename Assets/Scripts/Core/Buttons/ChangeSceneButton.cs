@@ -41,6 +41,8 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     public void OnPointerUp(PointerEventData eventData)
     {
         _image.sprite = _default;
+        _audioSource.volume = 0.23f;
+        _audioSource.pitch = 0.23f;
         _audioSource.PlayOneShot(_uncompressedClip);
 
         Invoke("LoadNextScene", 0f);
@@ -57,7 +59,10 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Time.timeScale = 1;
         _image.sprite = _pressed;
+        _audioSource.volume = 0.23f;
+        _audioSource.pitch = 0.23f;
         _audioSource.PlayOneShot(_compressedClip);
         Vector2 anchoredPosition = _rectTransform.anchoredPosition;
 

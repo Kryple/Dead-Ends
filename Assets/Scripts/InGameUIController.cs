@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Core.Observer_Pattern;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,9 +13,10 @@ public class InGameUIController : MonoBehaviour, IObserver
     [SerializeField] private AudioClip _backgroundSound;
     private GameObject _player;
     private int _liveId = 2;
-    
-    
+
+
     [SerializeField] private GameObject _gameOverScreen;
+    [SerializeField] private GameObject _highScore;
   
 
     private void Start()
@@ -40,6 +42,7 @@ public class InGameUIController : MonoBehaviour, IObserver
         {
             case IEvent.OnPlayerDie:
                 _gameOverScreen.SetActive(true);
+                _highScore.GetComponent<TextMeshProUGUI>().SetText($"High Score = {PlayerPrefs.GetInt("HighScore")}");
                 break;
             
             case IEvent.OnPlayerGetHurt:

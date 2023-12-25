@@ -26,5 +26,6 @@ public class LightFlickering : MonoBehaviour
 
         // Generate a random intensity based on timer and limits
         light.intensity = Mathf.Lerp(minIntensity, maxIntensity, Mathf.PerlinNoise(flickerTimer, Time.time));
+        
     }
 }

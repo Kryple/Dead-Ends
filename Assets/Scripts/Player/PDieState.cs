@@ -16,8 +16,15 @@ namespace Player
         public override void Enter()
         {
             base.Enter();
+            int currentScore = (int)Time.time * 10;
+            if (currentScore > PlayerPrefs.GetInt("HighScore"));
+                PlayerPrefs.SetInt("HighScore", currentScore);
+            
             _pStateMachine.NotifyObservers(IEvent.OnPlayerDie);
             _pStateMachine._pAllStates.ResetStat();
+
+            Time.timeScale = 0;
+            
         }
 
         public override void UpdateLogic()
