@@ -17,6 +17,7 @@ namespace Player
         protected static AudioClip _walkingSound;
         protected static AudioClip _hurtingSound;
         protected static Transform _transform;
+        protected static ParticleSystem _dustEffect;
 
         protected static float _horizontalInput; 
         protected static float _verticalInput; 
@@ -39,6 +40,7 @@ namespace Player
         
         protected static int _dirListId;//The index variable used for _posList
         protected static int _lives = 3;
+        protected static float _countTimeAlive = 0f;
         
 
         public PAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
@@ -59,14 +61,7 @@ namespace Player
             _walkingSound = _pStateMachine._walkingSound;
             _hurtingSound = _pStateMachine._hurtingSound;
             _transform = _pStateMachine._transform;
-
-
-            // _pStateMachine.CheckComponentNull(_audioSource);
-            // _pStateMachine.CheckComponentNull(_collider2D);
-            // _pStateMachine.CheckComponentNull(_rigidbody2D);
-            // _pStateMachine.CheckComponentNull(_animator);
-            // _pStateMachine.CheckComponentNull(_spriteRenderer);
-            
+            _dustEffect = _pStateMachine._dustEffect;
             
             //Initial value for the directionList
             for (int i = 0; i < _dirListCap; i++)
@@ -77,8 +72,8 @@ namespace Player
         public override void UpdateLogic()
         {
             base.UpdateLogic();
-            
-            
+
+            _countTimeAlive += Time.deltaTime;
             
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
@@ -115,13 +110,15 @@ namespace Player
             _audioSource.clip = _hurtingSound;
             _audioSource.loop = false;
             _audioSource.pitch = 1f;
-            _audioSource.volume = 1f;
+            _audioSource.volume = .9f;
             _audioSource.Play();
+            
         }
 
         public void ResetStat()
         {
             _lives = 3;
+            _countTimeAlive = 0f;
         }
     }
 }

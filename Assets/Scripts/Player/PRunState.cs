@@ -15,12 +15,22 @@ namespace Player
         public override void Enter()
         {
             base.Enter();
+            EnableWalkingSound();
+                
+                
+            _speed = _runSpeed; 
+            
+            
+            _dustEffect.Play();
+        }
+
+        public void EnableWalkingSound()
+        {
             _audioSource.clip = _walkingSound;
             _audioSource.loop = true;
             _audioSource.pitch = 0.72f;
-            _audioSource.volume = 0.72f;
+            _audioSource.volume = 0.53f;
             _audioSource.Play();
-            _speed = _runSpeed; 
         }
 
         public override void UpdateLogic()
@@ -54,18 +64,25 @@ namespace Player
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
-            Vector3 scaledDirect = _direction * _speed;
+            Vector3 scaledDirect = _direction.normalized * _speed;
             _transform.Translate(scaledDirect * Time.deltaTime);;
             
             //2nd way:
             //_transform.position = Vector3.MoveTowards(_transform.position, _transform.position + _direction * _speed, Time.deltaTime);
+
+
+            if (scaledDirect.x > Mathf.Epsilon)
+                _dustEffect.transform.localScale = new Vector3(1f, 1f, 1f);
+            else
+                _dustEffect.transform.localScale = new Vector3(-1f, 1f, 1f);
+
         }
 
         public override void Exit()
         {
             base.Exit();
             _audioSource.Stop();
-            
+            _dustEffect.Stop();
         }
     }
 }

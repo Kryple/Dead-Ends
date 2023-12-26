@@ -14,7 +14,7 @@ namespace Player
     {
 
         [HideInInspector] public PIdleState _pIdleState;
-        [HideInInspector] public PRunState _PRunState;
+        [HideInInspector] public PRunState _pRunState;
         [HideInInspector] public PDashState _pDashState;
         [HideInInspector] public PAttackState _pAttackState;
         [HideInInspector] public PDieState _pDieState;
@@ -29,6 +29,7 @@ namespace Player
         public AudioClip _hurtingSound;
         public Transform _transform;
         public InGameUIController _inGameUIController;
+        public ParticleSystem _dustEffect;
         
         
 
@@ -41,13 +42,7 @@ namespace Player
             TryGetComponent<SpriteRenderer>(out _spriteRenderer);
             TryGetComponent<Transform>(out _transform);
             _inGameUIController = GameObject.FindWithTag("UI").GetComponent<InGameUIController>();
-            
-            // _audioSource = GetComponent<AudioSource>();
-            // _collider2D = GetComponent<Collider2D>();
-            // _rigidbody2D = GetComponent<Rigidbody2D>();
-            // _animator = GetComponent<Animator>();
-            // _spriteRenderer = GetComponent<SpriteRenderer>();
-
+            _dustEffect = GetComponentInChildren<ParticleSystem>();
 
             CheckComponentNull(_audioSource);
             CheckComponentNull(_collider2D);
@@ -57,7 +52,7 @@ namespace Player
 
 
             _pIdleState = new PIdleState("PIdleState", this);
-            _PRunState = new PRunState("PRunState", this);
+            _pRunState = new PRunState("PRunState", this);
             _pDashState = new PDashState("PDashState", this);
             _pAttackState = new PAttackState("PAttackState", this);
             _pAllStates = new PAllStates("PAllStates", this);
@@ -91,6 +86,8 @@ namespace Player
             if (@event == IEvent.OnPlayerGetHurt)
             {
                 _pAllStates.PlayerGetHurt(1);
+                
+                // _pRunState.EnableWalkingSound();
             }
         }
         

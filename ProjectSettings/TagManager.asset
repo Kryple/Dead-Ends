@@ -64,12 +64,15 @@ TagManager:
   - name: Walls
     uniqueID: 2263182217
     locked: 0
+  - name: 
+    uniqueID: 1646712189
+    locked: 0
+  - name: 
+    uniqueID: 11068321
+    locked: 0
   - name: Player and Enemy
     uniqueID: 4226803929
     locked: 0
-  - name: New Layer 9
-    uniqueID: 1646712189
-    locked: 0
-  - name: New Layer 10
-    uniqueID: 11068321
+  - name: New Layer 11
+    uniqueID: 2451422487
     locked: 0

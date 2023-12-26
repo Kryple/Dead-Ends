@@ -16,7 +16,7 @@ namespace Player
         public override void Enter()
         {
             base.Enter();
-            int currentScore = (int)Time.time * 10;
+            int currentScore = (int)_countTimeAlive * 10;
             if (currentScore > PlayerPrefs.GetInt("HighScore"));
                 PlayerPrefs.SetInt("HighScore", currentScore);
             
@@ -24,7 +24,6 @@ namespace Player
             _pStateMachine._pAllStates.ResetStat();
 
             Time.timeScale = 0;
-            
         }
 
         public override void UpdateLogic()

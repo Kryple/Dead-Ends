@@ -40,12 +40,12 @@ namespace Player
                 return;
             }
             
-            if (_pStateMachine.CurrentState() != _pStateMachine._PRunState)
+            if (_pStateMachine.CurrentState() != _pStateMachine._pRunState)
             {
                 if (Mathf.Abs(_verticalInput) > Mathf.Epsilon ||
                     Mathf.Abs(_horizontalInput) > Mathf.Epsilon)
                 {
-                    _pStateMachine.ChangeState(_pStateMachine._PRunState);
+                    _pStateMachine.ChangeState(_pStateMachine._pRunState);
                 }
             }
             else if (_pStateMachine.CurrentState() != _pStateMachine._pIdleState)
