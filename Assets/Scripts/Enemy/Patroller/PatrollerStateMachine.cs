@@ -17,7 +17,7 @@ namespace Enemy.Patroller
         [HideInInspector] public PatrollerIdleState _patrollerIdleState;
         [HideInInspector] public PatrollerRunState _patrollerRunState;
         [HideInInspector] public PatrollerAttackState _patrollerAttackState;
-        // [HideInInspector] public EDieState _eDieState;
+        //Die State
         [HideInInspector] public PatrollerAllStates _patrollerAllStates;
 
         public  AudioSource _audioSource;
@@ -31,7 +31,6 @@ namespace Enemy.Patroller
         
         private void Awake()
         {
-            Debug.Log("initial");
             _audioSource = GetComponent<AudioSource>();
             _animator = GetComponent<Animator>();
             _collider2D = GetComponent<Collider2D>();
@@ -44,11 +43,11 @@ namespace Enemy.Patroller
             _patrollerIdleState = new PatrollerIdleState("PatrollerIdleState", this);
             _patrollerRunState = new PatrollerRunState("PatrollerRunState", this);
             _patrollerAttackState = new PatrollerAttackState("PatrollerAttackState", this);
-            // _eDieState = new EDieState("EDieState", this);
             _patrollerAllStates = new PatrollerAllStates("PatrollerAllState", this);
             
-            //PStateMachine observing PatrollerStateMachine from now            
+            //PStateMachine, _patrollerAllStates observing PatrollerStateMachine from now            
             AddObserver(_player.GetComponent<PStateMachine>());
+            AddObserver(_patrollerAllStates);
         }
 
         protected override BaseState GetInitialState()
@@ -68,7 +67,7 @@ namespace Enemy.Patroller
             // Debug.Log("Triggering");
             if (other.CompareTag("Player"))
             {
-                _patrollerAllStates.ChangeToAttack();
+                NotifyObservers(IEvent.OnPlayerinRange);
             }
         }
 
@@ -77,7 +76,6 @@ namespace Enemy.Patroller
         {
             //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
             StartCoroutine(LerpToTarget(originalPosition, _player, 0.5f));
-           
         }
         
         //Enemy lerp to the player

@@ -1,4 +1,5 @@
-﻿using FSM;
+﻿using System.Collections;
+using FSM;
 using UnityEngine;
 
 namespace Enemy.Patroller
@@ -14,7 +15,6 @@ namespace Enemy.Patroller
 
         public override void Enter()
         {
-            Debug.Log("HOHOHOHJO");
             _animator.SetTrigger(a_isRunning);
             
             base.Enter();
@@ -24,6 +24,12 @@ namespace Enemy.Patroller
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            
+        }
+
+        private async void ChangeDirection()
+        {
+            
         }
 
         public override void UpdatePhysics()

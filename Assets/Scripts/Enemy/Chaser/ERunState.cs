@@ -35,7 +35,7 @@ namespace Enemy.Chaser
         {
             if (_seeker.IsDone())
                 //The last parameter is a function that we would like it to call whenever it's done calculating the path. We need to do this, cuz depend on the complexity of the scene, generating a path might take a little while, and we don't want out game to be hung up with generating a path, it should just do it in the background, and notify us once it's done
-                _seeker.StartPath(_rigidbody2D.position, _target.position, OnPathComplete);
+                _seeker.StartPath(_rigidbody2D.position, _player.position, OnPathComplete);
                 
         }
 

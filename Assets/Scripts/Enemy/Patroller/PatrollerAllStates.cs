@@ -1,10 +1,11 @@
-﻿using Enemy.Chaser;
+﻿using Core.Observer_Pattern;
+using Enemy.Chaser;
 using FSM;
 using UnityEngine;
 
 namespace Enemy.Patroller
 {
-    public class PatrollerAllStates : BaseState
+    public class PatrollerAllStates : BaseState, IObserver
     {
         protected static PatrollerStateMachine _patrollerStateMachine;
         protected static AudioSource _audioSource;
@@ -17,6 +18,8 @@ namespace Enemy.Patroller
 
         private static float _timeElapsed = 0f;
         private static float _coolDownForNextAttack = 3f;
+        
+        
 
         public PatrollerAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {
@@ -66,6 +69,16 @@ namespace Enemy.Patroller
                 _timeElapsed = 0f;
             }
             
+        }
+
+        public void OnNotify(IEvent @event)
+        {
+            switch (@event)
+            {
+                case IEvent.OnPlayerinRange:
+                    ChangeToAttack();
+                    break;
+            }
         }
     }
 }

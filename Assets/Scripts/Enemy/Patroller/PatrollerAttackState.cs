@@ -43,5 +43,7 @@ namespace Enemy.Patroller
             base.Exit();
             _audioSource.Stop();
         }
+        
+        
     }
 }
