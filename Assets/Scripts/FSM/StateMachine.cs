@@ -11,12 +11,12 @@ namespace FSM
     public class StateMachine : Subject
     {
         BaseState _currentState;
-    void Start()
-    {
-        _currentState = GetInitialState();
-        if (_currentState != null)
-            _currentState.Enter();
-    }
+        void Start()
+        {
+            _currentState = GetInitialState();
+            if (_currentState != null)
+                _currentState.Enter();
+        }
         
 
 

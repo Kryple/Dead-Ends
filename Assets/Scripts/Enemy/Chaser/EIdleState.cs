@@ -2,7 +2,7 @@
 using FSM;
 using UnityEngine;
 
-namespace Enemy
+namespace Enemy.Chaser
 {
     public class EIdleState : EAllStates
     {

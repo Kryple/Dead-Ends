@@ -9,7 +9,7 @@ using Pathfinding;
 using Player;
 using UnityEngine.Serialization;
 
-namespace Enemy
+namespace Enemy.Chaser
 {
     
     public class EStateMachine : StateMachine
@@ -92,7 +92,6 @@ namespace Enemy
         public void AttackMotion(Vector3 originalPosition)
         {
             //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
-            int cnt = 0;
             StartCoroutine(LerpToTarget(originalPosition, _player, 0.5f));
            
         }

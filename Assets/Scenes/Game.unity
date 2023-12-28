@@ -995,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6215,6 +6215,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2778879223510147022, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778879223510147022, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778879223510147022, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -47489881
+      objectReference: {fileID: 0}
     - target: {fileID: 3911557116575358424, guid: a8c96ed2ede0b4d409c3407cb9b6347e, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -6472,7 +6484,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.317
-  m_Color: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+  m_Color: {r: 0.54595655, g: 0.5471698, b: 0.48729086, a: 1}
   m_Intensity: 0.35
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -6506,6 +6518,63 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1001 &1774452738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730182682162368034, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_Name
+      value: PatrollingEnemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
 --- !u!1 &1794403262
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,7 +7315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &4486498628023068861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7599,4 +7668,5 @@ SceneRoots:
   - {fileID: 1329542406}
   - {fileID: 119305763}
   - {fileID: 316788421}
+  - {fileID: 1774452738}
   - {fileID: 619394802}

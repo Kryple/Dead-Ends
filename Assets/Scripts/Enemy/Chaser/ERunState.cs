@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using StateMachine = FSM.StateMachine;
 
-namespace Enemy
+namespace Enemy.Chaser
 {
     public class ERunState : EAllStates
     {
