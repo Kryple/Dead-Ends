@@ -24,7 +24,8 @@ namespace Enemy.Chaser
             _audioSource.volume = 0.075f;
             
             _animator.SetTrigger(a_Attack);
-            AttackMotion(_self.position);
+            
+            LerpToTarget(_self.position, _player, 0.5f);
             ChangeToRun();
 
         }
@@ -50,14 +51,6 @@ namespace Enemy.Chaser
         public override void UpdatePhysics()
         {
             base.UpdatePhysics();
-        }
-        
-        //The motion of enemy when attack the player
-        public void AttackMotion(Vector3 originalPosition)
-        {
-            //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
-            LerpToTarget(originalPosition, _player, 0.5f);
-
         }
         
         //Enemy lerp to the player

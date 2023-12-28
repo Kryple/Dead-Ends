@@ -71,42 +71,7 @@ namespace Enemy.Patroller
             }
         }
 
-        //The motion of enemy when attack the player
-        public void AttackMotion(Vector3 originalPosition)
-        {
-            //cnt: Count the number of times the Coroutine below is called. We only it to be called twice, one to leap to the target and one to lerp back
-            StartCoroutine(LerpToTarget(originalPosition, _player, 0.5f));
-        }
         
-        //Enemy lerp to the player
-        IEnumerator LerpToTarget(Vector3 origin, Transform target, float duration)
-        {
-            float timeElapsed = 0.0f;
-            
-            while (timeElapsed < duration)
-            {
-                transform.position = Vector3.Lerp(origin, target.position, timeElapsed / duration);
-                timeElapsed += Time.deltaTime;
-                yield return null; // Wait for next frame to update position
-            }
-            
-            NotifyObservers(IEvent.OnPlayerGetHurt);
-            _audioSource.Play();
-            StartCoroutine(LerpToOriginalPosition(_self.position, origin, 0.5f));
-        }
-        
-        //Enemy lerp back to the origin position
-        IEnumerator LerpToOriginalPosition(Vector3 origin, Vector3 target, float duration)
-        {
-            float timeElapsed = 0.0f;
-            
-            while (timeElapsed < duration)
-            {
-                transform.position = Vector3.Lerp(origin, target, timeElapsed / duration);
-                timeElapsed += Time.deltaTime;
-                yield return null; // Wait for next frame to update position
-            }
-        }
     }
 
 }
