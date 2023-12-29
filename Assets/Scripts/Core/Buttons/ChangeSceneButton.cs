@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
+
 public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private Image _image;
@@ -45,7 +46,7 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
         _audioSource.pitch = 0.23f;
         _audioSource.PlayOneShot(_uncompressedClip);
 
-        Invoke("LoadNextScene", 0f);
+        StartCoroutine(LoadLevel(_sceneId));
 
         Vector2 anchoredPosition = _rectTransform.anchoredPosition;
 
@@ -74,17 +75,15 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
         
         
     }
-
-    void LoadNextScene()
-    {
-        StartCoroutine(LoadLevel(_sceneId));
-    }
-
+    
     IEnumerator LoadLevel(int _sceneId)
     {
         // _transition.SetTrigger(a_StartCrossfade);
         yield return new WaitForSeconds(_transitionTime);
-        SceneManager.LoadScene(_sceneId);
+        
+        //LoadSceneMode.Single: unload the current scene before loading the new one.
+        SceneManager.LoadScene(_sceneId, LoadSceneMode.Single);
+        
     }
 }
 

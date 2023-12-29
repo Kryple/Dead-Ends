@@ -22,7 +22,8 @@ namespace Enemy.Patroller
 
         public  AudioSource _audioSource;
         public  Animator _animator;
-        public  Collider2D _collider2D;
+        public  Collider2D _detectPlayerCollider2D;
+        public Collider2D _detectWallCollider2D;
         public  Rigidbody2D _rigidbody2D;
         public Transform _player;
         public  Transform _self;
@@ -33,7 +34,7 @@ namespace Enemy.Patroller
         {
             _audioSource = GetComponent<AudioSource>();
             _animator = GetComponent<Animator>();
-            _collider2D = GetComponent<Collider2D>();
+            _detectPlayerCollider2D = GetComponent<Collider2D>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _player = GameObject.FindWithTag("Player").transform;
             
@@ -71,7 +72,16 @@ namespace Enemy.Patroller
             }
         }
 
-        
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            Debug.Log("Hit something");
+            Vector2 collidePoint = other.GetContact(0).point;
+            Vector2 newDirect = ((Vector2)_self.position - collidePoint).normalized;
+            
+            _rigidbody2D.AddForce(newDirect * _patrollerAllStates.Speed);
+            
+            Debug.Log($"Hit wall at: {collidePoint.ToString()}");
+        }
     }
 
 }

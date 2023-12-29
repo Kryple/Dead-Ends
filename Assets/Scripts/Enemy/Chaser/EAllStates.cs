@@ -20,7 +20,7 @@ namespace Enemy.Chaser
         protected static AudioClip _biteSFX;
 
         private static float _timeElapsed = 0f;
-        private static float _coolDownForNextAttack = 3f;
+        private readonly float _coolDownForNextAttack = 3f;
         
         public EAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
         {

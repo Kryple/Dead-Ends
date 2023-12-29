@@ -16,8 +16,18 @@ namespace Enemy.Patroller
         protected static Transform _self;
         protected static AudioClip _biteSFX;
 
+        protected static float _speed = 3.4f;
+
+        public float Speed
+        {
+            get => _speed;
+            set => _speed = value;
+        }
+
+        protected static Vector2 _direction = new Vector2(1f, 1f);
+
         private static float _timeElapsed = 0f;
-        private static float _coolDownForNextAttack = 3f;
+        private readonly float  _coolDownForNextAttack = 3f;
         
         
 

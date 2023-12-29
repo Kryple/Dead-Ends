@@ -7,7 +7,7 @@ namespace Enemy.Chaser
 {
     public class EAttackState : EAllStates
     {
-        private string a_Attack = "Attack";
+        private readonly string a_Attack = "Attack";
         
         
         
@@ -63,6 +63,7 @@ namespace Enemy.Chaser
                 _self.position = Vector3.Lerp(origin, target.position, timeElapsed / duration);
                 timeElapsed += Time.deltaTime;
                 await Task.Yield(); // Wait for next frame to update position
+                
             }
             
             _eStateMachine.NotifyObservers(IEvent.OnPlayerGetHurt);

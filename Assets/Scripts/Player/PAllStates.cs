@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using Core.Observer_Pattern;
 using FSM;
+using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using StateMachine = FSM.StateMachine;
 
 namespace Player
 {
@@ -41,6 +43,8 @@ namespace Player
         protected static int _dirListId;//The index variable used for _posList
         protected static int _lives = 3;
         protected static float _countTimeAlive = 0f;
+        
+        
         
 
         public PAllStates(string name, StateMachine stateMachine) : base(name, stateMachine)
@@ -85,7 +89,7 @@ namespace Player
             }
             else
             {
-                // Debug.Log("index: " + _dirListId + "_dircap" + _dirListCap);
+                
                 Debug.Assert(_dirListId < _dirListCap, "Out of range");
                 _dirList[_dirListId] = new KeyValuePair<float, float>(_horizontalInput, _verticalInput);
                 _dirListId++;    
@@ -119,6 +123,8 @@ namespace Player
         {
             _lives = 3;
             _countTimeAlive = 0f;
+            _countAttackCombo = 0;
+            _timeCountAttackCombo = 0f;
         }
     }
 }
