@@ -28,6 +28,7 @@ namespace Enemy.Patroller
         public Transform _player;
         public  Transform _self;
         public  AudioClip _biteSFX;
+        public GameObject _directionArrow;
 
         
         private void Awake()

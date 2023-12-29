@@ -35,6 +35,7 @@ namespace Player
 
         private void Awake()
         {
+            Time.timeScale = 1f;
             TryGetComponent<AudioSource>(out _audioSource);
             TryGetComponent<Collider2D>(out _collider2D);
             TryGetComponent<Rigidbody2D>(out _rigidbody2D);

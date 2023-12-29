@@ -1374,6 +1374,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: arrow
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 205
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84411feeabd3594f84eceeee6a68f2f
+      internalID: -1759694555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1444,6 +1465,7 @@ TextureImporter:
       GUI_9: 916846394
       Player's avatar: -653975948
       Player's live: 661620944
+      arrow: -1759694555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

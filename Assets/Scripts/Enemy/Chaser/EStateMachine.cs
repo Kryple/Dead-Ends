@@ -31,6 +31,7 @@ namespace Enemy.Chaser
         public  Transform _self;
 
         public  AudioClip _biteSFX;
+        public GameObject _directionArrow;
         
         
         private void Awake()
