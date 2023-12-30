@@ -28,8 +28,8 @@ namespace Player
         {
             _audioSource.clip = _walkingSound;
             _audioSource.loop = true;
-            _audioSource.pitch = 0.72f;
-            _audioSource.volume = 0.53f;
+            _audioSource.pitch = 0.56f;
+            _audioSource.volume = 0.43f;
             _audioSource.Play();
         }
 

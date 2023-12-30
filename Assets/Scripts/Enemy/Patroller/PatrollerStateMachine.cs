@@ -54,7 +54,6 @@ namespace Enemy.Patroller
 
         protected override BaseState GetInitialState()
         {
-            Debug.Log("Getinitial");
             return _patrollerIdleState;
         }
         
@@ -75,13 +74,11 @@ namespace Enemy.Patroller
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            Debug.Log("Hit something");
+            
             Vector2 collidePoint = other.GetContact(0).point;
             Vector2 newDirect = ((Vector2)_self.position - collidePoint).normalized;
             
             _rigidbody2D.AddForce(newDirect * _patrollerAllStates.Speed);
-            
-            Debug.Log($"Hit wall at: {collidePoint.ToString()}");
         }
     }
 

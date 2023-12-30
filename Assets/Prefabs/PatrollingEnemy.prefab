@@ -372,7 +372,7 @@ MonoBehaviour:
   _detectWallCollider2D: {fileID: 6471976139008510892}
   _rigidbody2D: {fileID: 0}
   _player: {fileID: 0}
-  _self: {fileID: 0}
+  _self: {fileID: 4195549257279511501}
   _biteSFX: {fileID: 8300000, guid: daf485decaa7e024e83e4984b4938521, type: 3}
   _directionArrow: {fileID: 3715478613945225484}
 --- !u!70 &6471976139008510892

@@ -51,9 +51,9 @@ namespace Enemy.Chaser
             _timeElapsed += Time.deltaTime;
 
             //Change the enemy's face direction depends on the force apply to it 
-            if (_rigidbody2D.totalForce.x >= 0.001f)
+            if (_rigidbody2D.velocity.x >= 0.001f)
                 _self.localScale = new Vector3(-1f, 1f, 1f);
-            else if (_rigidbody2D.totalForce.x <= -0.001f)
+            else if (_rigidbody2D.velocity.x <= -0.001f)
                 _self.localScale = new Vector3(1f, 1f, 1f);
         }
 
@@ -75,13 +75,11 @@ namespace Enemy.Chaser
             else 
                 _directionArrow.SetActive(true);
             
-            //calculate the angle of the pointing-arrow
+            //calculate the angle of the pointing-arrow, using ArcCos
             float rad = (_self.position.x - _player.position.x) / distance;
-            Debug.Log("Rad = " + rad);
-            
             float angle = Mathf.Acos(rad) * Mathf.Rad2Deg;
             
-            Debug.Log("Angle: " + angle);
+            
             float yDiff = _self.position.y - _player.position.y;
             if (yDiff > 0)
                 _directionArrow.transform.rotation = Quaternion.Euler(0f, 0f, (angle - 90f));

@@ -31,9 +31,9 @@ namespace Enemy.Patroller
         }
         
         //Patrolling-enemies's direction 
-        protected static Vector2 _direction = new Vector2(1f, 1f);
+        protected Vector2 _direction = new Vector2(1f, 1f);
 
-        private static float _timeElapsed = 0f;
+        private float _timeElapsed = 0f;
         private readonly float  _coolDownForNextAttack = 3f;
         
         
@@ -63,9 +63,9 @@ namespace Enemy.Patroller
             _timeElapsed += Time.deltaTime;
             
             //Change the enemy's face direction depends on the force apply to it 
-            if (_rigidbody2D.totalForce.x >= 0.001f)
+            if (_rigidbody2D.velocity.x >= 0.001f)
                 _self.localScale = new Vector3(-1f, 1f, 1f);
-            else if (_rigidbody2D.totalForce.x <= -0.001f)
+            else if (_rigidbody2D.velocity.x <= -0.001f)
                 _self.localScale = new Vector3(1f, 1f, 1f);
         }
 
@@ -90,11 +90,9 @@ namespace Enemy.Patroller
             
             //calculate the angle of the pointing-arrow
             float rad = (_self.position.x - _player.position.x) / distance;
-            Debug.Log("Rad = " + rad);
-            
             float angle = Mathf.Acos(rad) * Mathf.Rad2Deg;
             
-            Debug.Log("Angle: " + angle);
+            
             float yDiff = _self.position.y - _player.position.y;
             if (yDiff > 0)
                 _directionArrow.transform.rotation = Quaternion.Euler(0f, 0f, (angle - 90f));
