@@ -19,7 +19,9 @@ namespace MainMenu
             
             _highScoreText.GetComponent<TextMeshProUGUI>().SetText($"High Score = {PlayerPrefs.GetInt("HighScore")}");
 
+            
             _audioSource.clip = _mainMenuBackground;
+            _audioSource.volume = 0.7f;
             _audioSource.Play();
         }
     }

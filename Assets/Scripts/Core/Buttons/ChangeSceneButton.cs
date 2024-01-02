@@ -41,10 +41,11 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     //OnPointerUp is called after: Release after Click, Drag Release, Cancel Drag
     public void OnPointerUp(PointerEventData eventData)
     {
+        
         _image.sprite = _default;
-        _audioSource.volume = 0.23f;
-        _audioSource.pitch = 0.23f;
-        _audioSource.PlayOneShot(_uncompressedClip);
+        // _audioSource.volume = 0.23f;
+        // _audioSource.pitch = 0.23f;
+        // _audioSource.PlayOneShot(_uncompressedClip);
 
         StartCoroutine(LoadLevel(_sceneId));
 
@@ -55,15 +56,15 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         // Assign the modified anchored position back to the RectTransform
         _rectTransform.anchoredPosition = anchoredPosition;
-        
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         Time.timeScale = 1;
         _image.sprite = _pressed;
-        _audioSource.volume = 0.23f;
-        _audioSource.pitch = 0.23f;
+        _audioSource.volume = 12f;
+        _audioSource.pitch = 1f;
+        
         _audioSource.PlayOneShot(_compressedClip);
         Vector2 anchoredPosition = _rectTransform.anchoredPosition;
 

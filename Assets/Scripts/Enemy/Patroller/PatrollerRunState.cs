@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using FSM;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using System.Threading.Tasks;
 using Random = UnityEngine.Random;

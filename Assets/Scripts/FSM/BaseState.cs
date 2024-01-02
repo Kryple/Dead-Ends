@@ -16,7 +16,9 @@ namespace FSM
 
         public virtual void Enter()
         {
-            Debug.Log("Entering " + name);  
+            #if UNITY_EDITOR
+                Debug.Log("Entering " + name);
+            #endif
         }
 
         public virtual void UpdateLogic()

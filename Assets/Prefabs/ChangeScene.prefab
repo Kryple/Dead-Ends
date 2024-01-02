@@ -69,8 +69,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1863634219, guid: d0d435ee7f0111d438f90f77bdb8aca2, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -314245196, guid: 5494c9a7a0d2c6b44a3bad9921af83f8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -136,10 +136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 4695058055567004635}
-  _default: {fileID: -1863634219, guid: d0d435ee7f0111d438f90f77bdb8aca2, type: 3}
-  _pressed: {fileID: 320942498, guid: d0d435ee7f0111d438f90f77bdb8aca2, type: 3}
-  _compressedClip: {fileID: 8300000, guid: ca526594597815f48a25f72688a09b04, type: 3}
-  _uncompressedClip: {fileID: 8300000, guid: ce59901c21c0756479e66ecb6c2bf077, type: 3}
+  _default: {fileID: -314245196, guid: 5494c9a7a0d2c6b44a3bad9921af83f8, type: 3}
+  _pressed: {fileID: 73065931, guid: 5494c9a7a0d2c6b44a3bad9921af83f8, type: 3}
+  _compressedClip: {fileID: 8300000, guid: d1bb57896bab11444ad7b19227e99679, type: 3}
+  _uncompressedClip: {fileID: 8300000, guid: 026d94bce175c654fb5616f4caf43bd5, type: 3}
   _audioSource: {fileID: 4695058055567004637}
   _transitionTime: 0.1
   _sceneId: 1
@@ -306,15 +306,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e1c4dd633610695429fc11b70d8a4d6b, type: 2}
+  m_sharedMaterial: {fileID: 1862698509770270401, guid: e1c4dd633610695429fc11b70d8a4d6b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278716682
+  m_fontColor: {r: 0.03773582, g: 0.034426503, b: 0.030758252, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -331,8 +331,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 41
+  m_fontSizeBase: 41
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
