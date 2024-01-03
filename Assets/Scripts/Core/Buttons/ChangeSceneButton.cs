@@ -13,7 +13,8 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     [SerializeField] private Sprite _default, _pressed;
     [SerializeField] private AudioClip _compressedClip, _uncompressedClip;
     [SerializeField] private AudioSource _audioSource;
-    // [SerializeField] Animator _transition;
+    [SerializeField] private bool _isChangeSceneButton = true;
+    
     [SerializeField] float _transitionTime = .44f;
     string a_StartCrossfade = "StartCrossfade";
 
@@ -46,8 +47,9 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
         // _audioSource.volume = 0.23f;
         // _audioSource.pitch = 0.23f;
         // _audioSource.PlayOneShot(_uncompressedClip);
-
-        StartCoroutine(LoadLevel(_sceneId));
+        
+        if (_isChangeSceneButton == true)
+            StartCoroutine(LoadLevel(_sceneId));
 
         Vector2 anchoredPosition = _rectTransform.anchoredPosition;
 

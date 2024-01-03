@@ -65,7 +65,6 @@ namespace Enemy.Patroller
         //Make sure that the current script had implemented MonoBehaviour
         private void OnTriggerStay2D(Collider2D other)
         {
-            // Debug.Log("Triggering");
             if (other.CompareTag("Player"))
             {
                 NotifyObservers(IEvent.OnPlayerinRange);
@@ -74,7 +73,7 @@ namespace Enemy.Patroller
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            
+            //When patrolling-enemy hits the wall, it turns back
             Vector2 collidePoint = other.GetContact(0).point;
             Vector2 newDirect = ((Vector2)_self.position - collidePoint).normalized;
             

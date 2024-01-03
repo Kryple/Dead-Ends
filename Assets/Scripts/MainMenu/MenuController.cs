@@ -10,19 +10,20 @@ namespace MainMenu
     {
         [SerializeField] private GameObject _highScoreText;
         [SerializeField] private AudioClip _mainMenuBackground;
-        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private GameObject _settingsScreen;
+        
 
         private void Start()
         {
-            _audioSource = GetComponent<AudioSource>();
-            
-            
             _highScoreText.GetComponent<TextMeshProUGUI>().SetText($"High Score = {PlayerPrefs.GetInt("HighScore")}");
 
-            
-            _audioSource.clip = _mainMenuBackground;
-            _audioSource.volume = 0.7f;
-            _audioSource.Play();
+            _settingsScreen.SetActive(false);
+        }
+
+        public void OpenSettingsSreen()
+        {
+            _settingsScreen.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 }

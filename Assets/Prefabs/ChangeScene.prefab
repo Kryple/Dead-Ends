@@ -141,6 +141,7 @@ MonoBehaviour:
   _compressedClip: {fileID: 8300000, guid: d1bb57896bab11444ad7b19227e99679, type: 3}
   _uncompressedClip: {fileID: 8300000, guid: 026d94bce175c654fb5616f4caf43bd5, type: 3}
   _audioSource: {fileID: 4695058055567004637}
+  _isChangeSceneButton: 1
   _transitionTime: 0.1
   _sceneId: 1
 --- !u!82 &4695058055567004637
