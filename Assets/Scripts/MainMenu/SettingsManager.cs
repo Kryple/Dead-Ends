@@ -73,7 +73,7 @@ public class SettingsManager : MonoBehaviour
         
     }
 
-    private void LoadVolume()
+    public void LoadVolume()
     {
         //
         _musicSlider.value = PlayerPrefs.GetFloat(p_musicVolume, 0);
