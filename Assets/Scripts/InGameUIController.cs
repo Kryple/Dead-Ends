@@ -17,6 +17,9 @@ public class InGameUIController : MonoBehaviour, IObserver
 
     [SerializeField] private GameObject _gameOverScreen;
     [SerializeField] private GameObject _highScore;
+
+    [SerializeField] private GameObject _gamePausingScreen;
+    [SerializeField] private GameObject _gamePausingButton;
   
 
     private void Start()
@@ -49,7 +52,24 @@ public class InGameUIController : MonoBehaviour, IObserver
                 Debug.Log("Player hurt");
                 _playerLivesList[_liveId--].SetActive(false);
                 break;
+            case IEvent.OnGamePause:
+                EnablePausingScreen();
+                break;
         }
+    }
+
+    public void EnablePausingScreen()
+    {
+        Time.timeScale = 0;
+        _gamePausingScreen.SetActive(true);
+        _gamePausingButton.SetActive(false);
+    }
+
+    public void DisablePausingScreen()
+    {
+        Time.timeScale = 1;
+        _gamePausingScreen.SetActive(false);
+        _gamePausingButton.SetActive(true);
     }
 
 }

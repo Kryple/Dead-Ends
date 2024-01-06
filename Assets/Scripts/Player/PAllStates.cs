@@ -77,6 +77,11 @@ namespace Player
         {
             base.UpdateLogic();
 
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                _pStateMachine.NotifyObservers(IEvent.OnGamePause);
+            }
+            
             _countTimeAlive += Time.deltaTime;
             
             _horizontalInput = Input.GetAxis("Horizontal");

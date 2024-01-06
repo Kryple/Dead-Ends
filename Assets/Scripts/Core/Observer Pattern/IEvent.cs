@@ -6,6 +6,7 @@
         OnEnemyDie,
         OnPlayerGetHurt,
         OnPlayerDie,
-        OnPlayerinRange
+        OnPlayerinRange,
+        OnGamePause
     }
 }
