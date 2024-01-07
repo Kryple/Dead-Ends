@@ -7,6 +7,7 @@
         OnPlayerGetHurt,
         OnPlayerDie,
         OnPlayerinRange,
-        OnGamePause
+        OnGamePause,
+        OnGameStart
     }
 }

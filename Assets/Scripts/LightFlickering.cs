@@ -26,7 +26,7 @@ public class LightFlickering : MonoBehaviour
         
          
         
-        Debug.Log("light: " + light.pointLightOuterRadius);
+        
     }
 
     void Update()

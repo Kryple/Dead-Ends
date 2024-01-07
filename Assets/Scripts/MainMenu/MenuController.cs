@@ -1,4 +1,5 @@
 ﻿using System;
+using Core.Observer_Pattern;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 namespace MainMenu
 {
-    public class MenuController : MonoBehaviour
+    public class MenuController : Subject
     {
         [SerializeField] private GameObject _highScoreText;
         [SerializeField] private GameObject _settingsScreen;

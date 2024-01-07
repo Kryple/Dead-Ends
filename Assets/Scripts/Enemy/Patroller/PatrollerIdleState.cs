@@ -15,7 +15,6 @@ namespace Enemy.Patroller
         public override void Enter()
         {
             base.Enter();
-            Debug.Log("Idle state");
             ChangeToRun();
         }
 
@@ -38,7 +37,6 @@ namespace Enemy.Patroller
         async void ChangeToRun()
         {
             await Task.Delay(230);
-            Debug.Log("Idle change to run");
             _patrollerStateMachine.ChangeState(_patrollerStateMachine._patrollerRunState);
         }
     }

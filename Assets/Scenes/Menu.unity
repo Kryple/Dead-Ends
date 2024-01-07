@@ -1526,6 +1526,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: m_Colors.m_FadeDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3323,6 +3327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicManager: {fileID: 522092906}
   _sFXManager: {fileID: 1937614506}
+  _mainMenuBackground: {fileID: 8300000, guid: df6a5095f551b8246865a3f47b83dd4c, type: 3}
+  _inGameBackground: {fileID: 8300000, guid: 31b2558c8a8ea1747a36002fed6bf8df, type: 3}
 --- !u!1 &1815473295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3858,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: m_Colors.m_FadeDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4050,6 +4060,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004633, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: m_Colors.m_FadeDuration
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
