@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour, IObserver
 {
-    public static AudioManager Instance;
+    
     
     
     [SerializeField] private GameObject _musicManager;
@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour, IObserver
 
     private AudioSource _musicSource;
 
+    //Singleton Pattern
+    public static AudioManager Instance;
     private void Awake()
     {
         if (Instance == null)
@@ -38,6 +40,10 @@ public class AudioManager : MonoBehaviour, IObserver
         
 
         _musicSource = _musicManager.GetComponent<AudioSource>();
+        _musicSource.clip = _mainMenuBackground;
+        _musicSource.volume = 0.65f;
+        _musicSource.pitch = 0.7f;
+        _musicSource.Play();
     }
 
     // Update is called once per frame

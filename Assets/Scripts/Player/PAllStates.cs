@@ -109,7 +109,6 @@ namespace Player
 
         public void PlayerGetHurt(int damage)
         {
-            Debug.Log("Live: " + _lives);
             _lives -= damage;
             if (_lives <= 0)
                 _pStateMachine.ChangeState(_pStateMachine._pDieState);

@@ -37,7 +37,10 @@ namespace Player
         {
             
             base.UpdateLogic();
-            
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _pStateMachine.ChangeState(_pStateMachine._pDashState);
+            }
 
             
             _animator.SetFloat(a_floSpeed, _direction.magnitude);

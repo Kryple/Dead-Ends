@@ -21,7 +21,8 @@ namespace Player
                 PlayerPrefs.SetInt("HighScore", currentScore);
             
             _pStateMachine.NotifyObservers(IEvent.OnPlayerDie);
-
+            
+            ResetStat();
             Time.timeScale = 0;
         }
 

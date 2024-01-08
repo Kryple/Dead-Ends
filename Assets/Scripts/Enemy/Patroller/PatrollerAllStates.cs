@@ -33,7 +33,7 @@ namespace Enemy.Patroller
         //Patrolling-enemies's direction 
         protected Vector2 _direction = new Vector2(1f, 1f);
 
-        private float _timeElapsed = 0f;
+        private static float _timeElapsed = 0f;
         private readonly float  _coolDownForNextAttack = 3f;
         
         
@@ -60,6 +60,7 @@ namespace Enemy.Patroller
         public override void UpdateLogic()
         {
             base.UpdateLogic();
+            
             _timeElapsed += Time.deltaTime;
             
             //Change the enemy's face direction depends on the force apply to it 
@@ -128,6 +129,7 @@ namespace Enemy.Patroller
             switch (@event)
             {
                 case IEvent.OnPlayerinRange:
+                    
                     ChangeToAttack();
                     break;
             }

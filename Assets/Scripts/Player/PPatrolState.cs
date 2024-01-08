@@ -57,10 +57,7 @@ namespace Player
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _pStateMachine.ChangeState(_pStateMachine._pDashState);
-            }
+            
             if (Input.GetKeyDown(KeyCode.X))
             {
                 _pStateMachine.ChangeState(_pStateMachine._pAttackState);

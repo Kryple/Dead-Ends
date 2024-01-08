@@ -68,7 +68,6 @@ namespace Enemy.Patroller
             
             if (other.CompareTag("Player"))
             {
-                Debug.Log("Detect");
                 NotifyObservers(IEvent.OnPlayerinRange);
             }
         }

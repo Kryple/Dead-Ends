@@ -51,7 +51,6 @@ public class InGameUIController : MonoBehaviour, IObserver
                 break;
             
             case IEvent.OnPlayerGetHurt:
-                Debug.Log("Player hurt");
                 _playerLivesList[_liveId--].SetActive(false);
                 break;
             case IEvent.OnGamePause:

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Player
 {
-    public class PDashState : PPatrolState
+    public class PDashState : PRunState
     {
         
         public PDashState(string name, StateMachine stateMachine) : base(name, stateMachine)
