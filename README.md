@@ -11,9 +11,11 @@ Enemy
 - Patrolling-bat: patrol around the map, attack you if you get in it's range
 
 ## Gameplay 
-You are dropped in a maze with some ghosts in it, your objective is try the best to survive as 
-long as you can. There are several types of powerups will be spawned randomly 
-in the map (health potion, speed up, invisible, )
+Thrown into a maze haunted by whispers, your only goal is to survive as long 
+as possible. Randomly scattered throughout the shifting corridors, power-ups 
+await: a health potion to mend your fraying nerves, a burst of speed to outrun 
+spectral claws, or the chilling embrace of invisibility. Can you dance with 
+death in this pixelated prison and escape the eternal fog?
 
 ## Mockups of the Game
 <img src="Pics/MenuScene.png" alt="" width="500" />
