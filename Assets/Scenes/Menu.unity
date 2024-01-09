@@ -1218,6 +1218,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
       value: 0
       objectReference: {fileID: 0}
@@ -1562,6 +1566,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
       value: 0
       objectReference: {fileID: 0}
@@ -1755,6 +1763,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
       value: 0
       objectReference: {fileID: 0}
@@ -1891,6 +1903,10 @@ PrefabInstance:
     - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
@@ -2048,6 +2064,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
       value: 0
       objectReference: {fileID: 0}
@@ -2187,6 +2207,10 @@ PrefabInstance:
     - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton
@@ -3888,6 +3912,10 @@ PrefabInstance:
     - target: {fileID: 4695058055567004634, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
+      propertyPath: _transitionTime
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4695058055567004638, guid: 591d5173f3bcaab4c9d1b4185c06dfbe, type: 3}
       propertyPath: _isChangeSceneButton

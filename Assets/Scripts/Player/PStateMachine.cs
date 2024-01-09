@@ -27,6 +27,7 @@ namespace Player
         public SpriteRenderer _spriteRenderer;
         public AudioClip _walkingSound;
         public AudioClip _hurtingSound;
+        public AudioClip _dashSound;
         public Transform _transform;
         public InGameUIController _inGameUIController;
         public ParticleSystem _dustEffect;

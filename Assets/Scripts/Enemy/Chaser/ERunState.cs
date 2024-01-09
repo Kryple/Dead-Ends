@@ -9,7 +9,7 @@ namespace Enemy.Chaser
     {
       
         private string a_isRunning = "isRunning";
-        private float _speed = 300f;
+        private float _speed = 560f;
         private float _nextWayPointDist = 3f;
 
         private Path _path;

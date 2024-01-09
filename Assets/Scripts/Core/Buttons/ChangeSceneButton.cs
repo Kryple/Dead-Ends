@@ -64,7 +64,7 @@ public class ChangeSceneButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         Time.timeScale = 1;
         _image.sprite = _pressed;
-        _audioSource.volume = 12f;
+        _audioSource.volume = 0.8f;
         _audioSource.pitch = 1f;
         
         _audioSource.PlayOneShot(_compressedClip);

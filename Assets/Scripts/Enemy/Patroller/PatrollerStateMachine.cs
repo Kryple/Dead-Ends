@@ -20,19 +20,20 @@ namespace Enemy.Patroller
         //Die State
         [HideInInspector] public PatrollerAllStates _patrollerAllStates;
 
-        public  AudioSource _audioSource;
-        public  Animator _animator;
-        public  Collider2D _detectPlayerCollider2D;
+        public AudioSource _audioSource;
+        public Animator _animator;
+        public Collider2D _detectPlayerCollider2D;
         public Collider2D _detectWallCollider2D;
-        public  Rigidbody2D _rigidbody2D;
+        public Rigidbody2D _rigidbody2D;
         public Transform _player;
-        public  Transform _self;
-        public  AudioClip _biteSFX;
+        public Transform _self;
+        public AudioClip _biteSFX;
         public GameObject _directionArrow;
 
         
         private void Awake()
         {
+            Debug.Log("Heheheh");
             _audioSource = GetComponent<AudioSource>();
             _animator = GetComponent<Animator>();
             _detectPlayerCollider2D = GetComponent<Collider2D>();
@@ -72,9 +73,17 @@ namespace Enemy.Patroller
             }
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Hit player");
+            }
+        }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
-            //When patrolling-enemy hits the wall, it turns back
+            //When patrolling-enemy hits the wall, it turns backward
             Vector2 collidePoint = other.GetContact(0).point;
             Vector2 newDirect = ((Vector2)_self.position - collidePoint).normalized;
             

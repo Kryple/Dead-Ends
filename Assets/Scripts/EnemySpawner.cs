@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _darkBatPrefab;
     private float _spawnRadius = 10f;
     [SerializeField] GameObject _player;
-    private float _coolDownTime = 10f;
+    private float _coolDownTime = 5f;
         
     private void Start()
     {

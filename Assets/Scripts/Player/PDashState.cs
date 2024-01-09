@@ -21,6 +21,8 @@ namespace Player
             base.Enter();
             _speed = _dashSpeed;
             
+            _audioSource.PlayOneShot(_dashSound, 1f);
+            
             _animator.SetBool(a_isMoving, false);
             _animator.SetTrigger(a_dash);
             ChangeToIdle();

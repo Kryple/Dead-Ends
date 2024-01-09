@@ -16,8 +16,7 @@ namespace Player
         {
             base.Enter();
             EnableWalkingSound();
-                
-                
+            
             _speed = _runSpeed; 
             
             
@@ -25,10 +24,10 @@ namespace Player
         }
 
         public void EnableWalkingSound()
-        {
+        { ;
             _audioSource.clip = _walkingSound;
             _audioSource.loop = true;
-            _audioSource.pitch = 0.56f;
+            // _audioSource.pitch = 0.56f;
             _audioSource.volume = 0.43f;
             _audioSource.Play();
         }
@@ -37,8 +36,9 @@ namespace Player
         {
             
             base.UpdateLogic();
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && _dashTimer >= _dashCooldownTime)
             {
+                _dashTimer = 0f;
                 _pStateMachine.ChangeState(_pStateMachine._pDashState);
             }
 

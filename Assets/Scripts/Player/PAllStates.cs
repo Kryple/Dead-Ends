@@ -18,6 +18,7 @@ namespace Player
         protected static SpriteRenderer _spriteRenderer;
         protected static AudioClip _walkingSound;
         protected static AudioClip _hurtingSound;
+        protected static AudioClip _dashSound;
         protected static Transform _transform;
         protected static ParticleSystem _dustEffect;
 
@@ -43,6 +44,9 @@ namespace Player
         protected static int _dirListId;//The index variable used for _posList
         protected static int _lives = 3;
         protected static float _countTimeAlive = 0f;
+
+        protected static float _dashCooldownTime = 1.5f;
+        protected static float _dashTimer = 0f;
         
         
         
@@ -64,6 +68,7 @@ namespace Player
             _spriteRenderer = _pStateMachine._spriteRenderer;
             _walkingSound = _pStateMachine._walkingSound;
             _hurtingSound = _pStateMachine._hurtingSound;
+            _dashSound = _pStateMachine._dashSound;
             _transform = _pStateMachine._transform;
             _dustEffect = _pStateMachine._dustEffect;
             
@@ -83,6 +88,7 @@ namespace Player
             }
             
             _countTimeAlive += Time.deltaTime;
+            _dashTimer += Time.deltaTime;
             
             _horizontalInput = Input.GetAxis("Horizontal");
             _verticalInput = Input.GetAxis("Vertical");
@@ -114,12 +120,12 @@ namespace Player
                 _pStateMachine.ChangeState(_pStateMachine._pDieState);
             
             _pStateMachine.NotifyObservers(IEvent.OnPlayerGetHurt);
-
-            _audioSource.clip = _hurtingSound;
-            _audioSource.loop = false;
+            
             _audioSource.pitch = 1f;
             _audioSource.volume = .9f;
-            _audioSource.Play();
+            _audioSource.PlayOneShot(_hurtingSound);
+            
+            
             
         }
 

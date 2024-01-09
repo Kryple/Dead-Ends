@@ -18,7 +18,7 @@ namespace Player
             base.Enter();
             int currentScore = (int)_countTimeAlive * 10;
             
-            Debug.Log($"current: {currentScore}, high: {PlayerPrefs.GetInt("HighScore")}");
+            // Debug.Log($"current: {currentScore}, high: {PlayerPrefs.GetInt("HighScore")}");
             if (currentScore > PlayerPrefs.GetInt("HighScore"))
                 PlayerPrefs.SetInt("HighScore", currentScore);
             
