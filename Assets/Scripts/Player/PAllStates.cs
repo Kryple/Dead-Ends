@@ -10,17 +10,17 @@ namespace Player
 {
     public class PAllStates : BaseState
     {
-        protected static PStateMachine _pStateMachine;
-        protected static AudioSource _audioSource;
-        protected static Collider2D _collider2D;
-        protected static Rigidbody2D _rigidbody2D;
-        protected static Animator _animator;
-        protected static SpriteRenderer _spriteRenderer;
-        protected static AudioClip _walkingSound;
-        protected static AudioClip _hurtingSound;
-        protected static AudioClip _dashSound;
-        protected static Transform _transform;
-        protected static ParticleSystem _dustEffect;
+        protected PStateMachine _pStateMachine;
+        protected AudioSource _audioSource;
+        protected Collider2D _collider2D;
+        protected Rigidbody2D _rigidbody2D;
+        protected Animator _animator;
+        protected SpriteRenderer _spriteRenderer;
+        protected AudioClip _walkingSound;
+        protected AudioClip _hurtingSound;
+        protected AudioClip _dashSound;
+        protected Transform _transform;
+        protected ParticleSystem _dustEffect;
 
         protected static float _horizontalInput; 
         protected static float _verticalInput; 
@@ -124,8 +124,6 @@ namespace Player
             _audioSource.pitch = 1f;
             _audioSource.volume = .9f;
             _audioSource.PlayOneShot(_hurtingSound);
-            
-            
             
         }
 

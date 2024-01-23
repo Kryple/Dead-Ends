@@ -16,6 +16,8 @@ namespace Enemy.Patroller
         public override void Enter()
         {
             base.Enter();
+            Debug.Log($"{_patrollerStateMachine._name} attacks");
+            
             _audioSource.clip = _biteSFX;
             _audioSource.volume = 0.075f;
             

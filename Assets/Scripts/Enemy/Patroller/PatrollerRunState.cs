@@ -22,10 +22,11 @@ namespace Enemy.Patroller
 
         public override void Enter()
         {
-            _animator.SetTrigger(a_isRunning);
             
             base.Enter();
             
+            _animator.SetTrigger(a_isRunning);
+            Debug.Log($"{_patrollerStateMachine._name} runs");
         }
 
         public override void UpdateLogic()

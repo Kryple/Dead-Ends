@@ -11,7 +11,7 @@ namespace FSM
     public class StateMachine : Subject
     {
         BaseState _currentState;
-        void Start()
+        protected void Start()
         {
             _currentState = GetInitialState();
             if (_currentState != null)

@@ -15,6 +15,7 @@ namespace Enemy.Patroller
         public override void Enter()
         {
             base.Enter();
+            Debug.Log($"{_patrollerStateMachine._name} idle: {_patrollerStateMachine.transform.position.ToString()}");
             ChangeToRun();
         }
 

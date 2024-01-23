@@ -10,14 +10,14 @@ namespace Enemy.Chaser
 {
     public class EAllStates : BaseState, IObserver
     {
-        protected static EStateMachine _eStateMachine;
-        protected static AudioSource _audioSource;
-        protected static Animator _animator;
-        protected static Rigidbody2D _rigidbody2D;
-        protected static Transform _player;
-        protected static Seeker _seeker;
-        protected static Transform _self;
-        protected static AudioClip _biteSFX;
+        protected EStateMachine _eStateMachine;
+        protected AudioSource _audioSource;
+        protected Animator _animator;
+        protected Rigidbody2D _rigidbody2D;
+        protected Transform _player;
+        protected Seeker _seeker;
+        protected Transform _self;
+        protected AudioClip _biteSFX;
         
         //the arrow represent the direction to the enemy
         private GameObject _directionArrow;

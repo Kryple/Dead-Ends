@@ -7,19 +7,19 @@ namespace Enemy.Patroller
 {
     public class PatrollerAllStates : BaseState, IObserver
     {
-        protected static PatrollerStateMachine _patrollerStateMachine;
-        protected static AudioSource _audioSource;
-        protected static Animator _animator;
-        protected static Rigidbody2D _rigidbody2D;
-        protected static Transform _player;
+        protected PatrollerStateMachine _patrollerStateMachine;
+        protected AudioSource _audioSource;
+        protected Animator _animator;
+        protected Rigidbody2D _rigidbody2D;
+        protected Transform _player;
         
-        protected static Transform _self;
-        protected static AudioClip _biteSFX;
+        protected Transform _self;
+        protected AudioClip _biteSFX;
         
         //the arrow represent the direction to the enemy
         private GameObject _directionArrow;
 
-        private float _maxArrowScale = 3f;
+        private static float _maxArrowScale = 3f;
 
         // Enemy's moving speed
         protected static float _speed = 3.4f;

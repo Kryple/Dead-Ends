@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &316788420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &410161228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7124,6 +7124,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407762606818526459, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d1d6f5527df9f4646b86f2c4aaf45b72, type: 2}
+    - target: {fileID: 407762606818526459, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407762606818526459, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043350665788562069, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: _name
+      value: A
+      objectReference: {fileID: 0}
     - target: {fileID: 1043350665788562069, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: _player
       value: 
@@ -7132,6 +7148,10 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1963202573}
+    - target: {fileID: 1043350665788562069, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1963202579}
     - target: {fileID: 1043350665788562069, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: _rigidbody2D
       value: 
@@ -7142,11 +7162,11 @@ PrefabInstance:
       objectReference: {fileID: 751076224}
     - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2
+      value: 13.09
       objectReference: {fileID: 0}
     - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.2
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4195549257279511501, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7183,6 +7203,10 @@ PrefabInstance:
     - target: {fileID: 7730182682162368034, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
       propertyPath: m_Name
       value: PatrollingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730182682162368034, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7402,6 +7426,11 @@ Animator:
 --- !u!50 &1963202575 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 739055884943640351, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
+  m_PrefabInstance: {fileID: 1774452738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1963202579 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9212439083833699378, guid: 2a8a4787f8be1ae4496da80e76c853c1, type: 3}
   m_PrefabInstance: {fileID: 1774452738}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2045604040 stripped
@@ -7881,6 +7910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3427806015a14834095adcb55f1106a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: B
   _audioSource: {fileID: 0}
   _animator: {fileID: 407762606130379093}
   _detectPlayerCollider2D: {fileID: 6906398590964172676}
@@ -7955,7 +7985,7 @@ Transform:
   m_GameObject: {fileID: 7730182681507902348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.262122, y: 17.271938, z: 0}
+  m_LocalPosition: {x: -0.2, y: 16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8336,7 +8366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8197123906677285546
 Transform:
   m_ObjectHideFlags: 0
@@ -8609,7 +8639,7 @@ SceneRoots:
   - {fileID: 1329542406}
   - {fileID: 119305763}
   - {fileID: 316788421}
+  - {fileID: 4195549257899517539}
   - {fileID: 1774452738}
   - {fileID: 619394802}
   - {fileID: 410161229}
-  - {fileID: 4195549257899517539}

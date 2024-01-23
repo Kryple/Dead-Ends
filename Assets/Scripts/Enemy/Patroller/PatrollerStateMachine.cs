@@ -20,6 +20,8 @@ namespace Enemy.Patroller
         //Die State
         [HideInInspector] public PatrollerAllStates _patrollerAllStates;
 
+        [SerializeField] public string _name;
+
         public AudioSource _audioSource;
         public Animator _animator;
         public Collider2D _detectPlayerCollider2D;
@@ -30,10 +32,11 @@ namespace Enemy.Patroller
         public AudioClip _biteSFX;
         public GameObject _directionArrow;
 
-        
+            
         private void Awake()
         {
-            Debug.Log("Heheheh");
+            Debug.Log($"{_name} stateMachine");
+            
             _audioSource = GetComponent<AudioSource>();
             _animator = GetComponent<Animator>();
             _detectPlayerCollider2D = GetComponent<Collider2D>();
@@ -41,16 +44,21 @@ namespace Enemy.Patroller
             _player = GameObject.FindWithTag("Player").transform;
             
             _self = this.transform;
+            
+            //PStateMachine, _patrollerAllStates observing PatrollerStateMachine from now            
+            AddObserver(_player.GetComponent<PStateMachine>());
+            AddObserver(_patrollerAllStates);
+        }
 
-            //The initialization of all states has to be before the "Start()" method which contains the "GetInitialState()" method -> using "Awake()" method
+        new void Start()
+        {
+            //The initialization of all states has to be before the "Start()" method of the parent class - StateMachine which contains the "GetInitialState()" method
             _patrollerIdleState = new PatrollerIdleState("PatrollerIdleState", this);
             _patrollerRunState = new PatrollerRunState("PatrollerRunState", this);
             _patrollerAttackState = new PatrollerAttackState("PatrollerAttackState", this);
             _patrollerAllStates = new PatrollerAllStates("PatrollerAllState", this);
             
-            //PStateMachine, _patrollerAllStates observing PatrollerStateMachine from now            
-            AddObserver(_player.GetComponent<PStateMachine>());
-            AddObserver(_patrollerAllStates);
+            base.Start();
         }
 
         protected override BaseState GetInitialState()
@@ -77,7 +85,8 @@ namespace Enemy.Patroller
         {
             if (other.CompareTag("Player"))
             {
-                Debug.Log("Hit player");
+                Debug.Log($"This is patroller: {_name}");
+                
             }
         }
 
